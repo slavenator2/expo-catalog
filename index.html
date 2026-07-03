@@ -1,49 +1,47 @@
 <!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache"><title>iPDF 2026</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-:root{--bg:#f5f5f7;--card:#fff;--text:#1d1d1f;--sec:#86868b;--acc:#0071e3;--bd:#d2d2d7;--rad:18px}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.5;overflow-x:hidden}
-.hero{background:rgba(255,255,255,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd);padding:24px;position:sticky;top:0;z-index:100}
-.hi{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#f5f5f7;color:#1d1d1f;overflow-x:hidden}
+.hero{background:#fff;border-bottom:1px solid #d2d2d7;padding:24px;position:sticky;top:0;z-index:100}
+.hi{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .hl{display:flex;align-items:center;gap:16px}
 .hlogo{height:48px}
 .ht h1{font-size:1.4em;font-weight:700}
-.ht .sub{font-size:.9em;color:var(--sec)}
-.hm{text-align:right;font-size:.85em;color:var(--sec);line-height:1.6}
-.hm strong{color:var(--text)}
+.ht .sub{font-size:.9em;color:#86868b}
+.hm{text-align:right;font-size:.85em;color:#86868b;line-height:1.6}
+.hm strong{color:#1d1d1f}
 .container{max-width:1100px;margin:0 auto;padding:24px 16px}
-.search-wrap{background:var(--card);border-radius:var(--rad);padding:16px 24px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
-#searchBox{width:100%;padding:12px 16px;border:2px solid var(--bd);border-radius:14px;font-size:1em;font-family:inherit;outline:none}
-#searchBox:focus{border-color:var(--acc)}
+.search-wrap{background:#fff;border-radius:18px;padding:16px 24px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+#searchBox{width:100%;padding:12px 16px;border:2px solid #d2d2d7;border-radius:14px;font-size:1em;font-family:inherit;outline:none}
+#searchBox:focus{border-color:#0071e3}
 .cat-filters{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.intro{background:var(--card);border-radius:var(--rad);padding:24px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.intro{background:#fff;border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
 .intro h2{font-size:1.15em;font-weight:700;margin-bottom:12px}
 .sb{display:flex;gap:24px;margin-bottom:20px}
-.sb>div{background:var(--card);border-radius:var(--rad);padding:16px 24px;box-shadow:0 1px 4px rgba(0,0,0,.06);flex:1;text-align:center}
+.sb>div{background:#fff;border-radius:18px;padding:16px 24px;box-shadow:0 1px 4px rgba(0,0,0,.06);flex:1;text-align:center}
 .sv{font-size:1.8em;font-weight:700}
-.sl{font-size:.8em;color:var(--sec)}
-.sup{background:var(--card);border-radius:var(--rad);padding:24px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
-.shd{display:flex;gap:16px;margin-bottom:16px}
-.snum{background:var(--text);color:#fff;min-width:32px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.9em;flex-shrink:0}
-.sbc-wrap{width:180px;flex-shrink:0}
-.sbc{width:100%;border-radius:10px;border:1px solid var(--bd);display:block}
-.sinfo{flex:1;min-width:0;overflow:hidden}
-.sname{font-size:1.25em;font-weight:700;margin-bottom:4px;word-break:break-word}
-.ctr{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
-.ctag{background:#f0f0f5;color:#555;padding:3px 10px;border-radius:100px;font-size:.78em;font-weight:500;white-space:nowrap}
+.sl{font-size:.8em;color:#86868b}
+.sup{background:#fff;border-radius:18px;padding:24px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.shd{overflow:hidden}
+.shd:after{content:'';display:table;clear:both}
+.snum{float:left;background:#1d1d1f;color:#fff;width:32px;height:32px;border-radius:50%;line-height:32px;text-align:center;font-weight:600;font-size:.9em;margin-right:16px}
+.sbc-wrap{float:left;width:180px;margin-right:16px}
+.sbc{width:100%;border-radius:10px;border:1px solid #d2d2d7;display:block}
+.sinfo{overflow:hidden}
+.sname{font-size:1.25em;font-weight:700;margin-bottom:4px}
+.ctr{margin-bottom:8px}
+.ctag{display:inline-block;background:#f0f0f5;color:#555;padding:3px 10px;border-radius:100px;font-size:.78em;font-weight:500;margin:2px}
 .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
-.ci{display:flex;align-items:center;gap:6px;font-size:.85em;color:var(--sec);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.ci .ic{font-size:1em;flex-shrink:0}
-.ci a{color:var(--acc);text-decoration:none;overflow:hidden;text-overflow:ellipsis}
-.pl{font-size:.8em;color:var(--sec);margin:10px 0 12px}
-.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.ci{font-size:.85em;color:#86868b;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;line-height:1.8}
+.ci a{color:#0071e3;text-decoration:none}
+.pl{font-size:.8em;color:#86868b;margin:10px 0 12px}
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;clear:both}
 .pc{background:#fafafa;border-radius:12px;overflow:hidden;border:1px solid #eee}
 .pc img{width:100%;height:140px;object-fit:cover;display:block}
 .pi{padding:10px 12px;font-size:.78em;color:#666;line-height:1.4}
-.footer{text-align:center;padding:24px;color:var(--sec);font-size:.85em;border-top:1px solid var(--bd);margin-top:32px}
+.footer{text-align:center;padding:24px;color:#86868b;font-size:.85em;border-top:1px solid #d2d2d7;margin-top:32px}
 .flogo{height:28px;margin-bottom:6px;opacity:.6}
-@media(max-width:768px){.hi{flex-direction:column;text-align:center}.hm{text-align:center}.shd{flex-direction:column;align-items:center}.sbc-wrap{width:100%;max-width:220px}.cgrid{grid-template-columns:1fr}.products{grid-template-columns:1fr 1fr}}
+@supports(display:flex){.shd{display:flex;gap:16px}.shd:after{display:none}.snum{float:none}.sbc-wrap{float:none;flex-shrink:0}.sinfo{flex:1;min-width:0}}
 </style></head><body>
 <div class="hero"><div class="hi"><div class="hl"><img class="hlogo" src="logo.png"><div class="ht"><h1>Каталог поставщиков</h1><div class="sub">iPDF · International Future Packaging Discovery Expo 2026</div></div></div><div class="hm"><strong>1–3 июля 2026</strong><br>Guangzhou Aerotropolis Expo Center</div></div></div>
 <div class="container">
