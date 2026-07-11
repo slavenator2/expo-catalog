@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Slava · Exhibition Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;background:#f5f5f7;color:#1d1d1f;padding:40px 20px}
+.wrap{max-width:1100px;margin:0 auto}
+h1{font-size:28px;font-weight:700;margin-bottom:4px}
+.sub{color:#86868b;font-size:14px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:30px}
+.card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.card .num{font-size:32px;font-weight:700;color:#0071e3}
+.card .lab{font-size:13px;color:#86868b;margin-top:4px}
+h2{font-size:18px;font-weight:600;margin-bottom:14px}
+.cities{display:flex;flex-wrap:wrap;gap:8px}
+.city{background:#fff;border-radius:10px;padding:10px 14px;font-size:13px;box-shadow:0 1px 4px rgba(0,0,0,.04);display:flex;justify-content:space-between;min-width:140px}
+.city .n{color:#0071e3;font-weight:600}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:10px}
+.links a{background:#fff;border-radius:10px;padding:12px 16px;text-decoration:none;color:#1d1d1f;font-size:13px;font-weight:500;box-shadow:0 1px 4px rgba(0,0,0,.04);transition:.2s}
+.links a:hover{box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.footer{margin-top:40px;padding-top:20px;border-top:1px solid #e5e5e7;font-size:12px;color:#86868b}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>📊 Exhibition Dashboard</h1>
+<div class="sub">11 Jul 2026 · Все данные обновляются автоматически</div>
+
+<div class="grid">
+  <div class="card"><div class="num">159</div><div class="lab">🏭 Поставщиков в каталоге iPDF</div></div>
+  <div class="card"><div class="num">351</div><div class="lab">📸 Визиток обработано</div></div>
+  <div class="card"><div class="num">10</div><div class="lab">📝 Заметок в Obsidian</div></div>
+  <div class="card"><div class="num">525</div><div class="lab">📋 Выставок в базе (Китай)</div></div>
+  <div class="card"><div class="num">18</div><div class="lab">🔜 Предстоит в 2026</div></div>
+  <div class="card"><div class="num">∞</div><div class="lab">🤖 Hermes Agent 24/7</div></div>
+</div>
+
+<h2>📍 Топ городов по выставкам</h2>
+<div class="cities">
+<div class="city"><span>Shanghai</span> <span class="n">205</span></div>
+<div class="city"><span>Guangzhou</span> <span class="n">87</span></div>
+<div class="city"><span>Beijing</span> <span class="n">50</span></div>
+<div class="city"><span>Shenzhen</span> <span class="n">44</span></div>
+<div class="city"><span>Zhuhai</span> <span class="n">12</span></div>
+<div class="city"><span>Chengdu</span> <span class="n">10</span></div>
+<div class="city"><span>Qingdao</span> <span class="n">7</span></div>
+<div class="city"><span>Wenzhou</span> <span class="n">6</span></div>
+<div class="city"><span>Yiwu</span> <span class="n">6</span></div>
+<div class="city"><span>Hangzhou</span> <span class="n">5</span></div>
+</div>
+
+<h2 style="margin-top:28px">🔗 Быстрые ссылки</h2>
+<div class="links">
+  <a href="https://slavenator2.github.io/expo-catalog/">📦 Каталог iPDF (рус)</a>
+  <a href="https://slavenator2.github.io/expo-catalog/en.html">📦 Каталог iPDF (eng)</a>
+  <a href="https://freebiztrip.com/futurepackaging">🖥️ iPDF на freebiztrip</a>
+  <a href="https://sh.autointeriorexpo.com">🚗 Auto Interior Expo</a>
+  <a href="https://slavenator2.github.io/expo-catalog/ipdf_suppliers.xlsx">📥 Скачать Excel</a>
+</div>
+
+<div class="footer">
+Hermes Agent · ExhibitionVault · Последнее обновление: {d['today']}
+</div>
+</div>
+</body>
+</html>
