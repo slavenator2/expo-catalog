@@ -271,7 +271,7 @@ No.101, 2-4-1, Greenland Airport Centre, Huadu District, Guangzhou City, Guangdo
 </div><div class="footer"><img class="flogo" src="logo.png"><br>iPDF 2026 · Guangzhou Aerotropolis Expo Center · ١–٣ يوليوя 2026</div><script>const ac=new Set();document.querySelectorAll(".ctag").forEach(t=>ac.add(t.textContent.trim()));const cc=document.getElementById("cf");[...ac].sort().forEach(cat=>{const b=document.createElement("span");b.className="ctag";b.textContent=cat;b.onclick=()=>{document.getElementById("searchBox").value=cat;filter()};cc.appendChild(b)});function filter(){const q=document.getElementById("searchBox").value.toLowerCase().trim();let v=0;document.querySelectorAll("section.sup").forEach(s=>{if(!q||s.textContent.toLowerCase().includes(q)){s.style.display="";v++}else s.style.display="none"});document.querySelector(".sv").textContent=v}</script>
 <div class="lb" id="lb" onclick="this.classList.remove('show')"><img id="lbi" src=""></div>
 <script>
-document.querySelectorAll('.sbc').forEach(function(img) {
+document.querySelectorAll('.sbc, .pc img').forEach(function(img) {
   img.onclick = function() {
     document.getElementById('lbi').src = this.src;
     document.getElementById('lb').classList.add('show');
