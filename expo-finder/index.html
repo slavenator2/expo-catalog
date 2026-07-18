@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>China Expo Finder</title>
+<!-- Apple-style design system -->
+<style>
+:root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --text: #1d1d1f;
+    --secondary: #86868b;
+    --blue: #0071e3;
+    --blue-hover: #0077ed;
+    --border: #e8e8ed;
+    --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    --radius: 14px;
+    --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+
+/* Header */
+header {
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 60px 0 24px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; }
+header p { color: var(--secondary); font-size: 14px; }
+
+/* Filters */
+.filters {
+    padding: 16px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.filters select, .filters input {
+    font-family: var(--font);
+    font-size: 14px;
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--text);
+    appearance: none;
+    -webkit-appearance: none;
+    min-width: 150px;
+    flex: 1;
+    max-width: 250px;
+}
+.filters select { background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2386868b' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; }
+
+/* Stats */
+.stats {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 13px;
+    padding: 8px 0 16px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-bottom: 40px;
+}
+
+@media (min-width: 640px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Card */
+.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+.card:active { transform: scale(0.98); }
+.card .title { font-size: 15px; font-weight: 600; line-height: 1.3; margin-bottom: 8px; }
+.card .meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.card .tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #f0f0f5;
+    color: var(--secondary);
+    white-space: nowrap;
+}
+.card .tag.city { background: #e8f0fe; color: #1967d2; }
+.card .tag.industry { background: #e6f4ea; color: #137333; }
+.card .tag.date { background: #fef7e0; color: #b06000; }
+.card .desc { font-size: 13px; color: var(--secondary); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card .footer { margin-top: 10px; font-size: 11px; color: var(--secondary); display: flex; justify-content: space-between; }
+
+/* Modal */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.modal-overlay.active { display: flex; }
+.modal {
+    background: var(--card);
+    border-radius: var(--radius);
+    max-width: 560px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 28px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.modal h2 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+.modal .section { margin: 16px 0; }
+.modal .section h3 { font-size: 13px; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.modal .section p { font-size: 14px; line-height: 1.5; }
+.modal .close {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 24px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.modal .close:hover { background: var(--blue-hover); }
+
+/* Loading */
+.loading { text-align: center; padding: 40px; color: var(--secondary); }
+.loading .spinner { width: 36px; height: 36px; margin: 0 auto 12px; border: 3px solid var(--border); border-top-color: var(--blue); border-radius: 50%; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Toast */
+.toast {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 14px;
+    z-index: 300;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease;
+}
+.toast.show { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateX(-50%) translateY(10px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🇨🇳 China Expo Finder</h1>
+        <p>525 выставок в 28 городах Китая</p>
+        <div class="filters">
+            <select id="cityFilter">
+                <option value="">Все города</option>
+            </select>
+            <select id="industryFilter">
+                <option value="">Все тематики</option>
+            </select>
+            <select id="monthFilter">
+                <option value="">Все месяцы</option>
+                <option value="01">Январь</option>
+                <option value="02">Февраль</option>
+                <option value="03">Март</option>
+                <option value="04">Апрель</option>
+                <option value="05">Май</option>
+                <option value="06">Июнь</option>
+                <option value="07">Июль</option>
+                <option value="08">Август</option>
+                <option value="09">Сентябрь</option>
+                <option value="10">Октябрь</option>
+                <option value="11">Ноябрь</option>
+                <option value="12">Декабрь</option>
+            </select>
+        </div>
+        <div class="stats" id="stats">Загрузка...</div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="grid" id="grid">
+        <div class="loading"><div class="spinner"></div>Загрузка выставок...</div>
+    </div>
+</main>
+
+<div class="modal-overlay" id="modal">
+    <div class="modal" id="modalContent">
+        <h2 id="modalTitle"></h2>
+        <div id="modalBody"></div>
+        <button class="close" onclick="closeModal()">Закрыть</button>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+let allExhibitions = [];
+
+async function loadData() {
+    try {
+        const res = await fetch('/exhibitions.json');
+        allExhibitions = await res.json();
+        populateFilters();
+        render();
+    } catch(e) {
+        document.getElementById('grid').innerHTML = '<div class="loading">Ошибка загрузки данных</div>';
+    }
+}
+
+function populateFilters() {
+    const cities = [...new Set(allExhibitions.map(e => e.city).filter(Boolean))].sort();
+    const industriesSet = new Set();
+    allExhibitions.forEach(e => {
+        if (e.industry) {
+            e.industry.split(',').forEach(i => {
+                const t = i.trim();
+                if (t) industriesSet.add(t);
+            });
+        }
+    });
+    const industries = [...industriesSet].sort();
+
+    const citySel = document.getElementById('cityFilter');
+    cities.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c; opt.textContent = c;
+        citySel.appendChild(opt);
+    });
+
+    const indSel = document.getElementById('industryFilter');
+    industries.forEach(i => {
+        const opt = document.createElement('option');
+        opt.value = i; opt.textContent = i.length > 30 ? i.slice(0,30)+'...' : i;
+        indSel.appendChild(opt);
+    });
+}
+
+function filterData() {
+    const city = document.getElementById('cityFilter').value;
+    const industry = document.getElementById('industryFilter').value;
+    const month = document.getElementById('monthFilter').value;
+
+    return allExhibitions.filter(e => {
+        if (city && e.city !== city) return false;
+        if (industry) {
+            const inds = (e.industry || '').toLowerCase();
+            if (!inds.includes(industry.toLowerCase())) return false;
+        }
+        if (month) {
+            if (!e.date || !e.date.includes(month)) return false;
+        }
+        return true;
+    });
+}
+
+function render() {
+    const filtered = filterData();
+    const grid = document.getElementById('grid');
+    document.getElementById('stats').textContent = `Найдено: ${filtered.length} из ${allExhibitions.length} выставок`;
+
+    if (filtered.length === 0) {
+        grid.innerHTML = '<div class="loading">Ничего не найдено. Попробуйте другие фильтры.</div>';
+        return;
+    }
+
+    grid.innerHTML = filtered.map((ex, i) => {
+        const industries = (ex.industry || '').split(',').filter(Boolean).slice(0, 3).map(i => `<span class="tag industry">${i.trim()}</span>`).join('');
+        const logo = ex.logo ? `<img src="${ex.logo}" style="width:40px;height:40px;object-fit:contain;border-radius:8px;margin-bottom:8px" onerror="this.style.display='none'">` : '';
+        return `
+        <div class="card" onclick="openModal(${i})">
+            ${logo}
+            <div class="title">${ex.title || 'Без названия'}</div>
+            <div class="meta">
+                ${ex.city ? `<span class="tag city">📍 ${ex.city}</span>` : ''}
+                ${ex.date ? `<span class="tag date">📅 ${ex.date}</span>` : ''}
+                ${industries}
+            </div>
+            <div class="desc">${ex.desc || 'Описание не указано'}</div>
+            <div class="footer">
+                <span>${ex.visitors ? `👥 ${ex.visitors}` : ''} ${ex.exhibitors ? `🏢 ${ex.exhibitors}` : ''} ${ex.area ? `📐 ${ex.area}` : ''}</span>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+function openModal(idx) {
+    // Find the actual exhibition from filtered list
+    const filtered = filterData();
+    const ex = filtered[idx];
+    if (!ex) return;
+
+    document.getElementById('modalTitle').textContent = ex.title || 'Без названия';
+    const industries = (ex.industry || '').split(',').filter(Boolean).map(i => `<span class="tag industry">${i.trim()}</span>`).join(' ');
+
+    document.getElementById('modalBody').innerHTML = `
+        <div class="section">
+            <h3>📍 Город</h3>
+            <p>${ex.city || 'Не указан'}</p>
+        </div>
+        <div class="section">
+            <h3>📅 Даты</h3>
+            <p>${ex.date || 'Не указаны'}</p>
+        </div>
+        ${ex.venue ? `<div class="section"><h3>🏛️ Место</h3><p>${ex.venue}</p></div>` : ''}
+        <div class="section">
+            <h3>🏷️ Тематика</h3>
+            <p>${industries || 'Не указана'}</p>
+        </div>
+        ${ex.desc ? `<div class="section"><h3>📖 Описание</h3><p style="font-size:14px;line-height:1.6">${ex.desc}</p></div>` : ''}
+        <div class="section">
+            <h3>📊 Масштаб</h3>
+            <p>${[ex.visitors ? `👥 Посетителей: ${ex.visitors}` : '', ex.exhibitors ? `🏢 Экспонентов: ${ex.exhibitors}` : '', ex.area ? `📐 Площадь: ${ex.area}` : ''].filter(Boolean).join(' · ')}</p>
+        </div>
+        ${ex.website ? `<div class="section"><h3>🔗 Сайт</h3><p><a href="${ex.website}" target="_blank" style="color:var(--blue);text-decoration:none">${ex.website}</a></p></div>` : ''}
+    `;
+    document.getElementById('modal').classList.add('active');
+}
+
+function closeModal() {
+    document.getElementById('modal').classList.remove('active');
+}
+
+// Close modal on overlay click
+document.getElementById('modal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+});
+
+// Re-render on filter change
+document.querySelectorAll('.filters select').forEach(s => {
+    s.addEventListener('change', render);
+});
+
+loadData();
+</script>
+</body>
+</html>
