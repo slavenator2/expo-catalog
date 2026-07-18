@@ -236,7 +236,7 @@ let allExhibitions = [];
 
 async function loadData() {
     try {
-        const res = await fetch('/exhibitions.json');
+        const res = await fetch('/expo-catalog/expo-finder/exhibitions.json');
         allExhibitions = await res.json();
         populateFilters();
         render();
