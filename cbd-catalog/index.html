@@ -17,18 +17,18 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 @media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
 .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;border:1px solid transparent;transition:transform .2s}
 .card:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,.1)}
-.card .snum{font-size:12px;color:var(--secondary);margin-bottom:6px;font-weight:500}
+.snum{font-size:12px;color:var(--secondary);margin-bottom:6px;font-weight:500}
 .sbc{width:100%;border-radius:10px;cursor:pointer;transition:transform .2s;margin-bottom:12px}
 .sbc:hover{transform:scale(1.02)}
-.sinfo{font-size:14px;line-height:1.5}
-.sinfo strong{display:block;font-size:16px;margin-bottom:4px}
+.sname{font-size:16px;font-weight:700;margin-bottom:4px;line-height:1.3}
+.sinfo{font-size:13px;color:var(--secondary);line-height:1.5;margin-bottom:4px}
+.sinfo .label{color:var(--text);font-weight:500}
 .products{margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
 .pc{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;background:#f9f9fb;border-radius:10px;padding:10px;cursor:pointer;transition:transform .2s}
 .pc:hover{transform:scale(1.01)}
 .pc img{width:100px;height:100px;object-fit:cover;border-radius:8px;flex-shrink:0}
 .pi{font-size:12px;color:var(--text);line-height:1.4;flex:1}
 .pl{font-size:12px;color:var(--secondary);margin-top:8px}
-.ctr{font-size:12px;color:var(--secondary);margin-top:2px}
 @media(max-width:480px){.pc img{width:80px;height:80px}}
 </style>
 </head>
@@ -36,19 +36,23 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 <header>
 <div class="container">
 <h1>🌿 CBD Expo — Suppliers Catalog</h1>
-<p>75 suppliers with business cards and product photos</p>
-<div class="stats">75 companies · 75 with products</div>
+<p>75 verified suppliers</p>
+<div class="stats">75 companies · 71 with company names · 62 with phones</div>
 </div>
 </header>
 <main class="container">
 <div class="grid">
 <section class="card">
 <div class="snum">#1</div>
-<img class="sbc" src="cards_clean/1_card1_4469badb-018b-4850-bcba-0daae28b155a.jpg" alt="Business card 1" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/1_card1_4469badb-018b-4850-bcba-0daae28b155a.jpg" alt="Card 1" onclick="openLightbox(this.src)">
+<div class="sname">Sunhohi</div>
 <div class="sinfo">
-<strong>Supplier #1</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Crystal Wong</span><br>
+📞 +86-137 0262 5097<br>
+🌐 <a href="https://www.sunhohiwindow.com" target="_blank" style="color:var(--blue)">www.sunhohiwindow.com</a><br>
+📍 20th Floor, Building A1, Full International Financial Center, No. 28, Haiwu Road, Guicheng Street, N...<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/1_product1_aa4599b9-5338-44c5-a22f-6253a7d50fae.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -66,11 +70,11 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#2</div>
-<img class="sbc" src="cards_clean/2_card1_e7a763b9-313a-44d2-8d7b-f904fe28f576.jpg" alt="Business card 2" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/2_card1_e7a763b9-313a-44d2-8d7b-f904fe28f576.jpg" alt="Card 2" onclick="openLightbox(this.src)">
+<div class="sname">Supplier #2</div>
 <div class="sinfo">
-<strong>Supplier #2</strong>
-<div class="pl">3 товаров</div>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/2_product1_3490fdb0-05a2-4556-9fa7-48cc53295f3f.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -88,11 +92,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#3</div>
-<img class="sbc" src="cards_clean/3_card1_d527edd4-e494-4c30-985c-92cf81c2efec.jpg" alt="Business card 3" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/3_card1_d527edd4-e494-4c30-985c-92cf81c2efec.jpg" alt="Card 3" onclick="openLightbox(this.src)">
+<div class="sname">Guangzhou NewHoo Technology Co. Ltd</div>
 <div class="sinfo">
-<strong>Supplier #3</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Tony</span><br>
+📞 +86-198-7837-3626<br>
+🌐 <a href="https://www.gznewhoo.com" target="_blank" style="color:var(--blue)">www.gznewhoo.com</a><br>
+📍 Building 7, Hongyu Smart Industrial Park, No. 333 Juhuashi Avenue, Huadu District, Guangzhou<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/3_product1_e615a416-18e8-4387-bd37-8c4b8a58c057.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -110,11 +118,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#4</div>
-<img class="sbc" src="cards_clean/4_card1_560d8ab6-9408-4b58-be99-5899f6efdfd1.jpg" alt="Business card 4" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/4_card1_560d8ab6-9408-4b58-be99-5899f6efdfd1.jpg" alt="Card 4" onclick="openLightbox(this.src)">
+<div class="sname">榜威电子科技（上海）有限公司 (Bweetech Electronics Technology (Shanghai) Co., Ltd)</div>
 <div class="sinfo">
-<strong>Supplier #4</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">骆剑 (Kim Lok)</span><br>
+📞 186-5759-0678<br>
+🌐 <a href="https://www.bweetech.com" target="_blank" style="color:var(--blue)">www.bweetech.com</a><br>
+📍 上海市松江区沪亭北路99弄金地广场1号楼7层 (F7, #1, Plaza Jindi, Lane 99, North Huting Rd, Songjiang District, Shanghai)<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/4_product1_7c2a92e5-dcc7-45ef-8a11-5ea5006e8fb2.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -132,11 +144,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#5</div>
-<img class="sbc" src="cards_clean/5_card1_49a87fa2-1bbe-46de-b302-0aaff0eef377.jpg" alt="Business card 5" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/5_card1_49a87fa2-1bbe-46de-b302-0aaff0eef377.jpg" alt="Card 5" onclick="openLightbox(this.src)">
+<div class="sname">DEIOUX WINDOWS & DOORS</div>
 <div class="sinfo">
-<strong>Supplier #5</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">CANDICE CHOU</span><br>
+📞 +86-13392246940<br>
+🌐 <a href="https://WWW.DEIOUXWINDOWS.COM" target="_blank" style="color:var(--blue)">WWW.DEIOUXWINDOWS.COM</a><br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/5_product1_f11dc9d4-1bbc-41f5-ab4c-e3bbd88c497d.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -154,11 +169,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#6</div>
-<img class="sbc" src="cards_clean/6_card1_b86c8e19-6a93-41db-910c-ddd4950b00ee.jpg" alt="Business card 6" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/6_card1_b86c8e19-6a93-41db-910c-ddd4950b00ee.jpg" alt="Card 6" onclick="openLightbox(this.src)">
+<div class="sname">Zhongshan Smartek Security Technology Co.,LTD</div>
 <div class="sinfo">
-<strong>Supplier #6</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Tim Pan</span><br>
+📞 +86-15889896019<br>
+🌐 <a href="https://www.smarteklock.com" target="_blank" style="color:var(--blue)">www.smarteklock.com</a><br>
+📍 6F, Bldg 10, No.1 Shengyu Rd.Jidonger, Xiaolan Town, Zhongshan City, Guangdong, China 528415<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/6_product1_cd73e3c6-5064-4783-9598-5d550d992bb5.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -176,11 +195,11 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#7</div>
-<img class="sbc" src="cards_clean/7_card1_1c171c5b-6474-452f-9ba5-9401bf3f2dcc.jpg" alt="Business card 7" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/7_card1_1c171c5b-6474-452f-9ba5-9401bf3f2dcc.jpg" alt="Card 7" onclick="openLightbox(this.src)">
+<div class="sname">Supplier #7</div>
 <div class="sinfo">
-<strong>Supplier #7</strong>
-<div class="pl">3 товаров</div>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/7_product1_aecf401a-6cc9-4fb5-8549-fd87db0dbacc.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -198,11 +217,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#8</div>
-<img class="sbc" src="cards_clean/8_card1_2c3c957b-ff66-42d2-af03-29d5ca6d4aff.jpg" alt="Business card 8" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/8_card1_2c3c957b-ff66-42d2-af03-29d5ca6d4aff.jpg" alt="Card 8" onclick="openLightbox(this.src)">
+<div class="sname">浙江鑫东洁具有限公司 (ZHEJIANG XINDONG SANITARY WARE CO., LTD.)</div>
 <div class="sinfo">
-<strong>Supplier #8</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">曾燕燕 Elyn</span><br>
+📞 0086-182 5765 3405<br>
+📍 Xuanmen Industrial Zone, Yuhuan, Zhejiang, China, 317608<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/8_product1_6fef0750-2a5b-4c27-8ec6-ce6eabb6b151.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -220,11 +242,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#9</div>
-<img class="sbc" src="cards_clean/9_card1_34858f0e-c8ca-432e-ad54-e44906ca6f0c.jpg" alt="Business card 9" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/9_card1_34858f0e-c8ca-432e-ad54-e44906ca6f0c.jpg" alt="Card 9" onclick="openLightbox(this.src)">
+<div class="sname">NIFO 耐孚</div>
 <div class="sinfo">
-<strong>Supplier #9</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">顾鹏</span><br>
+📞 13326792105<br>
+📍 佛山市南海区大沥谭边工业区虹岭一路一号（2号厂房）<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/9_product1_7d7b140a-004b-4914-bbf8-37ea98e721c6.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -242,11 +267,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#10</div>
-<img class="sbc" src="cards_clean/10_card1_dfdf9205-f09d-4c04-8568-670295bed69e.jpg" alt="Business card 10" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/10_card1_dfdf9205-f09d-4c04-8568-670295bed69e.jpg" alt="Card 10" onclick="openLightbox(this.src)">
+<div class="sname">温州金锏智能锁具有限公司</div>
 <div class="sinfo">
-<strong>Supplier #10</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">张丽</span><br>
+📞 15057304393<br>
+🌐 <a href="https://www.jinjianlock.com" target="_blank" style="color:var(--blue)">www.jinjianlock.com</a><br>
+📍 温州市瓯海区郭溪街道智能锁具产业园(1号楼)1号<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/10_product1_dd787a2b-e694-42c7-9110-91d7cb165cd3.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -264,11 +293,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#11</div>
-<img class="sbc" src="cards_clean/11_card1_2d455d02-ce2b-43b8-ab29-5f863c2106a6.jpg" alt="Business card 11" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/11_card1_2d455d02-ce2b-43b8-ab29-5f863c2106a6.jpg" alt="Card 11" onclick="openLightbox(this.src)">
+<div class="sname">佛山市同路匠人家具有限公司</div>
 <div class="sinfo">
-<strong>Supplier #11</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">赖华芳</span><br>
+📞 13727479513, 400-8339513<br>
+📍 广东省佛山市顺德区龙江镇联塑嘉园三路3号9513家具总部<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/11_product1_74b31ee0-e7ad-4b15-b00e-17a445574320.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -286,11 +318,11 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#12</div>
-<img class="sbc" src="cards_clean/12_card1_c6376271-e155-4d30-9bac-56383cc610d9.jpg" alt="Business card 12" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/12_card1_c6376271-e155-4d30-9bac-56383cc610d9.jpg" alt="Card 12" onclick="openLightbox(this.src)">
+<div class="sname">中山市福乐门智能科技有限公司</div>
 <div class="sinfo">
-<strong>Supplier #12</strong>
-<div class="pl">3 товаров</div>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/12_product1_184b5af8-2ad8-44c3-882d-84a00cf338a8.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -308,11 +340,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#13</div>
-<img class="sbc" src="cards_clean/13_card1_f88a885c-d7c9-4c0c-a7ee-790c8985824e.jpg" alt="Business card 13" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/13_card1_f88a885c-d7c9-4c0c-a7ee-790c8985824e.jpg" alt="Card 13" onclick="openLightbox(this.src)">
+<div class="sname">CHINA GUANGCHAO CONTAINER HOUSE</div>
 <div class="sinfo">
-<strong>Supplier #13</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">陈洁玲 Rowling</span><br>
+📞 +86 189 2997 1329<br>
+🌐 <a href="https://www.cgchcontainer.com" target="_blank" style="color:var(--blue)">www.cgchcontainer.com</a><br>
+📍 Rm. 5710, 656 Huangpu Ave., Tianhe, Guangzhou<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/13_product1_348e6b9d-18a1-4065-9db9-d6738dcc5959.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -330,11 +366,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#14</div>
-<img class="sbc" src="cards_clean/14_card1_8aad0d5c-c5be-4ba9-a508-0816d0a3ecfb.jpg" alt="Business card 14" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/14_card1_8aad0d5c-c5be-4ba9-a508-0816d0a3ecfb.jpg" alt="Card 14" onclick="openLightbox(this.src)">
+<div class="sname">广东招材建材科技有限公司</div>
 <div class="sinfo">
-<strong>Supplier #14</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">黎桃桃</span><br>
+📞 +8618934320539<br>
+🌐 <a href="https://www.liblun.com" target="_blank" style="color:var(--blue)">www.liblun.com</a><br>
+📍 广东省佛山市南海区罗村社区新下村5号厂房<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/14_product1_5225de51-4009-4017-bfc9-ed33c1efd3d5.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -352,11 +392,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#15</div>
-<img class="sbc" src="cards_clean/15_card1_ac154be3-db3c-4431-8b4f-5e0d7a53cd5f.jpg" alt="Business card 15" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/15_card1_ac154be3-db3c-4431-8b4f-5e0d7a53cd5f.jpg" alt="Card 15" onclick="openLightbox(this.src)">
+<div class="sname">广东伟经家居制品有限公司 (Guangdong Wireking Household Products Co., Ltd.)</div>
 <div class="sinfo">
-<strong>Supplier #15</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">欧阳玉滢 (Sonia Ouyang)</span><br>
+📞 +86-13392758223<br>
+🌐 <a href="https://www.wireking.com" target="_blank" style="color:var(--blue)">www.wireking.com</a><br>
+📍 广东省佛山市顺德区均安镇智安北路12号 (No.12 Zhi'an North Road, Jun'an, Shunde, Foshan, Guangdong, China)<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/15_product1_2d2c4a98-0323-4de7-87db-5762688aecb9.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -374,11 +418,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#16</div>
-<img class="sbc" src="cards_clean/16_card1_ff990944-5899-4dc8-b15a-06b621948726.jpg" alt="Business card 16" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/16_card1_ff990944-5899-4dc8-b15a-06b621948726.jpg" alt="Card 16" onclick="openLightbox(this.src)">
+<div class="sname">佛山市悠派家居科技有限公司</div>
 <div class="sinfo">
-<strong>Supplier #16</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">黄伟业</span><br>
+📞 13825596371<br>
+🌐 <a href="https://www.LGPKB.com" target="_blank" style="color:var(--blue)">www.LGPKB.com</a><br>
+📍 广东省佛山市顺德区大良街道古鉴成展路3号<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/16_product1_9c64e30d-582b-4765-b30e-2297db3feabd.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -396,11 +444,13 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#17</div>
-<img class="sbc" src="cards_clean/17_card1_54b5bcd4-9bc2-4b0f-a8b9-12c10dec6511.jpg" alt="Business card 17" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/17_card1_54b5bcd4-9bc2-4b0f-a8b9-12c10dec6511.jpg" alt="Card 17" onclick="openLightbox(this.src)">
+<div class="sname">常州市永春保温材料有限公司</div>
 <div class="sinfo">
-<strong>Supplier #17</strong>
-<div class="pl">3 товаров</div>
+🌐 <a href="https://www.ycbwcl.1688.com" target="_blank" style="color:var(--blue)">www.ycbwcl.1688.com</a><br>
+📍 江苏省常州市<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/17_product1_ea9a3837-7ac3-4310-b463-977d38c72fc3.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -418,11 +468,13 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#18</div>
-<img class="sbc" src="cards_clean/18_card1_37b18826-c900-4184-8310-6c2d6b2e0bee.jpg" alt="Business card 18" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/18_card1_37b18826-c900-4184-8310-6c2d6b2e0bee.jpg" alt="Card 18" onclick="openLightbox(this.src)">
+<div class="sname">杭州班昇</div>
 <div class="sinfo">
-<strong>Supplier #18</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">陈卓敏 Ruby</span><br>
+📞 +86 13556688832<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/18_product1_4cbccf05-6ed2-495d-b1b2-6da3e6fd1a28.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -440,11 +492,13 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#19</div>
-<img class="sbc" src="cards_clean/19_card1_fdb3004f-9c4c-4069-addf-bde6b2d0c951.jpg" alt="Business card 19" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/19_card1_fdb3004f-9c4c-4069-addf-bde6b2d0c951.jpg" alt="Card 19" onclick="openLightbox(this.src)">
+<div class="sname">江门市新阳刚智能科技有限公司</div>
 <div class="sinfo">
-<strong>Supplier #19</strong>
-<div class="pl">3 товаров</div>
+📞 135 3666 7789, 400-9090-518<br>
+📍 广东省江门市新会区大泽镇万洋众创城38-1号<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/19_product1_59ecb64d-6deb-4c03-8371-9aa940b730d9.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -462,11 +516,12 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#20</div>
-<img class="sbc" src="cards_clean/20_card1_c27a2fa4-b90e-46c4-9edf-a06384aad5c4.jpg" alt="Business card 20" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/20_card1_c27a2fa4-b90e-46c4-9edf-a06384aad5c4.jpg" alt="Card 20" onclick="openLightbox(this.src)">
+<div class="sname">三强地毯 (THREE-STRONG CARPET)</div>
 <div class="sinfo">
-<strong>Supplier #20</strong>
-<div class="pl">3 товаров</div>
+📞 0769-89807692<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/20_product1_211416f8-334d-40d9-81e7-0473baa7f004.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -484,11 +539,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#21</div>
-<img class="sbc" src="cards_clean/21_card1_d7f3b2aa-2ace-49ca-af6d-fb2dad4bd95d.jpg" alt="Business card 21" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/21_card1_d7f3b2aa-2ace-49ca-af6d-fb2dad4bd95d.jpg" alt="Card 21" onclick="openLightbox(this.src)">
+<div class="sname">Zhejiang Kehon Intelligent Science & Technology Co., Ltd.</div>
 <div class="sinfo">
-<strong>Supplier #21</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Sammi Shi</span><br>
+📞 +86 156 8948 5097<br>
+🌐 <a href="https://www.kehon.cn" target="_blank" style="color:var(--blue)">www.kehon.cn</a><br>
+📍 No.1 Hangchuan Rd., Huzhen Town, Jinyun County, Zhejiang, China<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/21_product1_d0b62679-7c77-4fe7-b683-2711fd10b642.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -506,11 +565,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#22</div>
-<img class="sbc" src="cards_clean/22_card1_e62ea2ae-a3e0-4f81-a622-0130d43bc585.jpg" alt="Business card 22" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/22_card1_e62ea2ae-a3e0-4f81-a622-0130d43bc585.jpg" alt="Card 22" onclick="openLightbox(this.src)">
+<div class="sname">CAE SANITARY FITTINGS INDUSTRY CO., LTD. GUANGDONG</div>
 <div class="sinfo">
-<strong>Supplier #22</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Josie Guan</span><br>
+📞 +86-13702279135<br>
+🌐 <a href="https://www.china-cae.com" target="_blank" style="color:var(--blue)">www.china-cae.com</a><br>
+📍 No.62-64, Xingda Rd., Shagang Dist., ShuikouTown, Kaiping; Guangdong, P.R.Of China. PC: 529321<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/22_product1_97862d9b-cc2d-4658-9863-fb66241eb872.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -528,11 +591,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#23</div>
-<img class="sbc" src="cards_clean/23_card1_2af3db4e-1160-4686-b6cb-e497f63556b8.jpg" alt="Business card 23" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/23_card1_2af3db4e-1160-4686-b6cb-e497f63556b8.jpg" alt="Card 23" onclick="openLightbox(this.src)">
+<div class="sname">利亚德光电股份有限公司</div>
 <div class="sinfo">
-<strong>Supplier #23</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">金厚强</span><br>
+📞 13510009569, 18829341125, 400-8592-666<br>
+🌐 <a href="https://www.leyard.com" target="_blank" style="color:var(--blue)">www.leyard.com</a><br>
+📍 北京市海淀区颐和园路北正红旗西街9号 / 深圳市龙华区观澜街道君子布社区观和路6号利亚德南方产业园A栋<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/23_product1_7d80bb4d-ed96-4139-8695-7b8196f42c17.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -550,11 +617,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#24</div>
-<img class="sbc" src="cards_clean/24_card1_06e28318-8aa3-47e9-9543-9949433ff111.jpg" alt="Business card 24" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/24_card1_06e28318-8aa3-47e9-9543-9949433ff111.jpg" alt="Card 24" onclick="openLightbox(this.src)">
+<div class="sname">Zhejiang Kehon Intelligent Science & Technology Co.,Ltd.</div>
 <div class="sinfo">
-<strong>Supplier #24</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">David</span><br>
+📞 +86 157 5573 4990<br>
+🌐 <a href="https://www.kehon.cn" target="_blank" style="color:var(--blue)">www.kehon.cn</a><br>
+📍 No.1 Hangchuan Rd., Huzhen Town, Jinyun County, Zhejiang, China<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/24_product1_b8811435-6784-4750-bcca-f74531b920bb.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -572,11 +643,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#25</div>
-<img class="sbc" src="cards_clean/25_card1_4edc2219-4ef1-4fa4-aa8f-5356763b7187.jpg" alt="Business card 25" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/25_card1_4edc2219-4ef1-4fa4-aa8f-5356763b7187.jpg" alt="Card 25" onclick="openLightbox(this.src)">
+<div class="sname">广州传祺时代智能科技有限公司</div>
 <div class="sinfo">
-<strong>Supplier #25</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">洪美兰</span><br>
+📞 13450298606<br>
+🌐 <a href="https://www.chuangqitimes.com" target="_blank" style="color:var(--blue)">www.chuangqitimes.com</a><br>
+📍 广州市黄埔区云埔工业区观达路20号密博科技园<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/25_product1_b8d97317-81bb-43d5-947a-abd15a08192b.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -594,11 +669,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#26</div>
-<img class="sbc" src="cards_clean/26_card1_099b4f43-a4db-4b2f-ad1c-c5067c89ee34.jpg" alt="Business card 26" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/26_card1_099b4f43-a4db-4b2f-ad1c-c5067c89ee34.jpg" alt="Card 26" onclick="openLightbox(this.src)">
+<div class="sname">Guangdong CAE Sanitary Fittings Co., Ltd.</div>
 <div class="sinfo">
-<strong>Supplier #26</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Janice Kuan</span><br>
+📞 +86-750-2713118<br>
+🌐 <a href="https://www.cae.cn" target="_blank" style="color:var(--blue)">www.cae.cn</a><br>
+📍 No.22, 2nd Phase, Shuikou Sanitary Ware Industrial Park, Kaiping, Guangdong, China<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/26_product1_ac48798d-237f-43df-842d-0c9984c5b393.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -616,11 +695,11 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#27</div>
-<img class="sbc" src="cards_clean/27_card1_b87a6140-29b2-48e4-b4d4-a60e0033fa5a.jpg" alt="Business card 27" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/27_card1_b87a6140-29b2-48e4-b4d4-a60e0033fa5a.jpg" alt="Card 27" onclick="openLightbox(this.src)">
+<div class="sname">THOR索而</div>
 <div class="sinfo">
-<strong>Supplier #27</strong>
-<div class="pl">3 товаров</div>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/27_product1_7133c96c-1ebb-4b1a-8110-71b751fd3818.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -638,11 +717,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#28</div>
-<img class="sbc" src="cards_clean/28_card1_b1b9d88c-d43b-47e3-b1ed-9cbf38a37687.jpg" alt="Business card 28" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/28_card1_b1b9d88c-d43b-47e3-b1ed-9cbf38a37687.jpg" alt="Card 28" onclick="openLightbox(this.src)">
+<div class="sname">JNOD 基诺德</div>
 <div class="sinfo">
-<strong>Supplier #28</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">周信朋 Joe Zhou</span><br>
+📞 +86 199 2825 2201<br>
+🌐 <a href="https://www.jnodwater.com" target="_blank" style="color:var(--blue)">www.jnodwater.com</a><br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/28_product1_8cfbcc20-2fdc-4e2f-8edd-b62f166dbd1d.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -660,11 +742,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#29</div>
-<img class="sbc" src="cards_clean/29_card1_0e3d4204-ae4f-4d9f-9578-c68e23751ddf.jpg" alt="Business card 29" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/29_card1_0e3d4204-ae4f-4d9f-9578-c68e23751ddf.jpg" alt="Card 29" onclick="openLightbox(this.src)">
+<div class="sname">榜威电子科技（上海）有限公司</div>
 <div class="sinfo">
-<strong>Supplier #29</strong>
-<div class="pl">3 товаров</div>
+📞 021-57715805<br>
+🌐 <a href="https://www.bweetech.com" target="_blank" style="color:var(--blue)">www.bweetech.com</a><br>
+📍 上海市闵行区新骏环路188号15号楼南5层A501室<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/29_product1_b3be0639-f2e2-404c-9824-7646c260f158.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -682,11 +767,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#30</div>
-<img class="sbc" src="cards_clean/30_card1_76fdb6d9-34da-4a12-b190-2f024ec860b9.jpg" alt="Business card 30" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/30_card1_76fdb6d9-34da-4a12-b190-2f024ec860b9.jpg" alt="Card 30" onclick="openLightbox(this.src)">
+<div class="sname">Suzhou Acousound New Material Technology Inc.</div>
 <div class="sinfo">
-<strong>Supplier #30</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Yolanda He</span><br>
+📞 +86-18018121056<br>
+🌐 <a href="https://www.polyacoustic.com" target="_blank" style="color:var(--blue)">www.polyacoustic.com</a><br>
+📍 No.10 Aimin Road, Xiangcheng, Suzhou, Jiangsu, China 215152<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/30_product1_5281bc7d-7812-43bc-bf34-548e12a394eb.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -704,11 +793,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#31</div>
-<img class="sbc" src="cards_clean/31_card1_9c75bcfb-1dec-4a81-b523-7597c5629097.jpg" alt="Business card 31" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/31_card1_9c75bcfb-1dec-4a81-b523-7597c5629097.jpg" alt="Card 31" onclick="openLightbox(this.src)">
+<div class="sname">诺奥(福建)环保家居用品有限公司</div>
 <div class="sinfo">
-<strong>Supplier #31</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">蔡绿缘</span><br>
+📞 0086-13599917696<br>
+🌐 <a href="https://www.fjnuoao.cn" target="_blank" style="color:var(--blue)">www.fjnuoao.cn</a><br>
+📍 福建省漳州市长泰区兴泰工业园区台湾工业园锦都路191号<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/31_product1_213eb671-883b-4a27-be48-cd054c2a0635.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -726,11 +819,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#32</div>
-<img class="sbc" src="cards_clean/32_card1_4bd82fd1-300b-4bd4-8805-d41adbc1cf85.jpg" alt="Business card 32" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/32_card1_4bd82fd1-300b-4bd4-8805-d41adbc1cf85.jpg" alt="Card 32" onclick="openLightbox(this.src)">
+<div class="sname">Guangzhou Sunrans Sanitary Ware Co., Ltd / Guangzhou Sunrans New Energy Technology Co., Ltd</div>
 <div class="sinfo">
-<strong>Supplier #32</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">William</span><br>
+📞 +86 134 1613 9887<br>
+🌐 <a href="https://http://www.sunrans.com" target="_blank" style="color:var(--blue)">http://www.sunrans.com</a><br>
+📍 Headquarter: No.38-4, Lisan Avenue, Zengjiang Street, Zengcheng, Guangzhou; Factory: Xiang 2 Road, H...<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/32_product1_f67cf8cf-0eb6-4c60-9848-7f633c0a6f9a.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -748,11 +845,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#33</div>
-<img class="sbc" src="cards_clean/33_card1_6378c394-e8b9-4b4c-bdf4-c1c4d59df5d0.jpg" alt="Business card 33" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/33_card1_6378c394-e8b9-4b4c-bdf4-c1c4d59df5d0.jpg" alt="Card 33" onclick="openLightbox(this.src)">
+<div class="sname">IFUN PARK & TIPTOPFUN AMUSEMENT</div>
 <div class="sinfo">
-<strong>Supplier #33</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Ivy Zhou</span><br>
+📞 +86 133 0238 5758<br>
+🌐 <a href="https://www.ifunpark.com / www.ifunamusement.com" target="_blank" style="color:var(--blue)">www.ifunpark.com / www.ifunamusement.com</a><br>
+📍 No. 13, Wenqiao Road, Xinqiao Village, Shiji Town, Panyu District, Guangzhou City, China<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/33_product1_8ebf84e5-620a-4944-8130-7301b9ca0014.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -770,11 +871,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#34</div>
-<img class="sbc" src="cards_clean/34_card1_c34920bb-4835-49b9-988f-71f7345aaa1b.jpg" alt="Business card 34" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/34_card1_c34920bb-4835-49b9-988f-71f7345aaa1b.jpg" alt="Card 34" onclick="openLightbox(this.src)">
+<div class="sname">RENQIU TUOXIN BUILDING MATERIALS CO., LTD</div>
 <div class="sinfo">
-<strong>Supplier #34</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Emily Li</span><br>
+📞 +86 19831737599<br>
+🌐 <a href="https://https://www.tuoxinfiberglassmesh.com/" target="_blank" style="color:var(--blue)">https://www.tuoxinfiberglassmesh.com/</a><br>
+📍 Yanling Industrial Park, Renqiu City, Hebei Province, China<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/34_product1_29f35ae2-77fc-4451-8fb0-1fcaab8b4717.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -792,11 +897,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#35</div>
-<img class="sbc" src="cards_clean/35_card1_e49e6d3c-c5d8-4ad4-88d1-ebe1016b0a46.jpg" alt="Business card 35" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/35_card1_e49e6d3c-c5d8-4ad4-88d1-ebe1016b0a46.jpg" alt="Card 35" onclick="openLightbox(this.src)">
+<div class="sname">安居福智能门</div>
 <div class="sinfo">
-<strong>Supplier #35</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">罗加玲</span><br>
+📞 18928121650<br>
+📍 广东省中山市东凤镇<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/35_product1_4bb37442-d1eb-4e78-a4c8-b74ab5ab6f5b.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -814,11 +922,12 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#36</div>
-<img class="sbc" src="cards_clean/36_card1_c7b7ebdb-bfb3-421a-b48b-6216d3be806c.jpg" alt="Business card 36" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/36_card1_c7b7ebdb-bfb3-421a-b48b-6216d3be806c.jpg" alt="Card 36" onclick="openLightbox(this.src)">
+<div class="sname">东方喜卡</div>
 <div class="sinfo">
-<strong>Supplier #36</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">果果</span><br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/36_product1_df55edad-989d-41eb-9a2f-4c374099ee22.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -836,11 +945,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#37</div>
-<img class="sbc" src="cards_clean/37_card1_165579c1-12a9-4e91-9044-2c3bbcb5d2cd.jpg" alt="Business card 37" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/37_card1_165579c1-12a9-4e91-9044-2c3bbcb5d2cd.jpg" alt="Card 37" onclick="openLightbox(this.src)">
+<div class="sname">GUANGDONG TUOXUN INTELLIGENT TECHNOLOGY CO., LTD</div>
 <div class="sinfo">
-<strong>Supplier #37</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Wing</span><br>
+📞 189-2984-9818<br>
+📍 Auto Parts Industrial Park, Jinli Town, Gaoyao District, Zhaoqing, Guangdong<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/37_product1_94f61c90-77be-400f-807c-dc2269371bc2.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -858,11 +970,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#38</div>
-<img class="sbc" src="cards_clean/38_card1_bd238162-bb2b-4d90-8878-6bd93ec40504.jpg" alt="Business card 38" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/38_card1_bd238162-bb2b-4d90-8878-6bd93ec40504.jpg" alt="Card 38" onclick="openLightbox(this.src)">
+<div class="sname">佛山市方泓五金建材有限公司</div>
 <div class="sinfo">
-<strong>Supplier #38</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">陈施志凯</span><br>
+📞 +86 134 3318 1558<br>
+📍 中国广东省佛山市南海区里水镇大步工业区13号<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/38_product1_9e38cd4f-3832-4199-b9a0-bdf3ae0d8dab.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -880,11 +995,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#39</div>
-<img class="sbc" src="cards_clean/39_card1_87580080-4e41-466f-af25-2a778a8a7436.jpg" alt="Business card 39" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/39_card1_87580080-4e41-466f-af25-2a778a8a7436.jpg" alt="Card 39" onclick="openLightbox(this.src)">
+<div class="sname">Gaocheng</div>
 <div class="sinfo">
-<strong>Supplier #39</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">叶小龙/Dustin Ye</span><br>
+📞 +86-188 5861 0008<br>
+🌐 <a href="https://www.cngaocheng.cn" target="_blank" style="color:var(--blue)">www.cngaocheng.cn</a><br>
+📍 浙江省三门县浦坝港镇沿海工业城 (Coastal Industrial City, Pubagang Town, Sanmen, Taizhou City, Zhejiang Pro., China)<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/39_product1_438c7ad0-19f7-4fdf-a8fd-fb3b4f0cca08.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -902,11 +1021,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#40</div>
-<img class="sbc" src="cards_clean/40_card1_4a8fda0c-a4da-4f80-8210-f0fa41e7b165.jpg" alt="Business card 40" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/40_card1_4a8fda0c-a4da-4f80-8210-f0fa41e7b165.jpg" alt="Card 40" onclick="openLightbox(this.src)">
+<div class="sname">ZHEJIANG DOUBLE-LIN VALVES CO., LTD.</div>
 <div class="sinfo">
-<strong>Supplier #40</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Dream Lin</span><br>
+📞 86-13710718529, 86-020-66837727<br>
+🌐 <a href="https://www.double-lin.com" target="_blank" style="color:var(--blue)">www.double-lin.com</a><br>
+📍 Yanpan Hardware Industrial Area, Ganjiang Town, Yuhuan, Zhejiang, China<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/40_product1_1bbbcf2d-b550-4ea4-8008-17f5a4281271.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -924,11 +1047,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#41</div>
-<img class="sbc" src="cards_clean/41_card1_5906dc98-a555-4357-a80d-3e9840673fc5.jpg" alt="Business card 41" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/41_card1_5906dc98-a555-4357-a80d-3e9840673fc5.jpg" alt="Card 41" onclick="openLightbox(this.src)">
+<div class="sname">CHANGZHOU YOUCARE DECORATION ENGINEERING CO.LTD.</div>
 <div class="sinfo">
-<strong>Supplier #41</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Eric Huang</span><br>
+📞 13813551160, 0519-88784050<br>
+🌐 <a href="https://www.ycpanel.com" target="_blank" style="color:var(--blue)">www.ycpanel.com</a><br>
+📍 #28, Changzhou East Road, Henglin Town, Changzhou City, Jiangsu, China<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/41_product1_1ae7da4b-1e1c-42e4-9b26-f8413b7f40bc.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -946,11 +1073,12 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#42</div>
-<img class="sbc" src="cards_clean/42_card1_8f78702e-415a-49bc-a2e9-73ed3c415b79.jpg" alt="Business card 42" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/42_card1_8f78702e-415a-49bc-a2e9-73ed3c415b79.jpg" alt="Card 42" onclick="openLightbox(this.src)">
+<div class="sname">优品声学吸音隔音</div>
 <div class="sinfo">
-<strong>Supplier #42</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">杨伟杰</span><br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/42_product1_450b4795-174c-4d64-8ec9-79765843d51d.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -968,11 +1096,13 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#43</div>
-<img class="sbc" src="cards_clean/43_card1_0b1a4096-ac4e-4569-93cc-1515ffc32e4d.jpg" alt="Business card 43" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/43_card1_0b1a4096-ac4e-4569-93cc-1515ffc32e4d.jpg" alt="Card 43" onclick="openLightbox(this.src)">
+<div class="sname">广州市优品声学科技有限公司</div>
 <div class="sinfo">
-<strong>Supplier #43</strong>
-<div class="pl">3 товаров</div>
+🌐 <a href="https://www.gzypsx.com" target="_blank" style="color:var(--blue)">www.gzypsx.com</a><br>
+📍 广东省广州市番禺区石碁镇文边路28号二栋二层<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/43_product1_6c890646-826d-4207-8164-476d1829e74d.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -990,11 +1120,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#44</div>
-<img class="sbc" src="cards_clean/44_card1_39bc3a94-f845-4fea-8dd1-cf32bd3a38fa.jpg" alt="Business card 44" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/44_card1_39bc3a94-f845-4fea-8dd1-cf32bd3a38fa.jpg" alt="Card 44" onclick="openLightbox(this.src)">
+<div class="sname">贵州佑远木业有限公司</div>
 <div class="sinfo">
-<strong>Supplier #44</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">颜加伟</span><br>
+📞 133 9983 5678<br>
+📍 贵州省赤水市成渝（赤水）家具产业园A3-2<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/44_product1_96d631d5-c6cb-45fd-8dea-9929c50c637e.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1012,11 +1145,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#45</div>
-<img class="sbc" src="cards_clean/45_card1_9d2da64d-a246-4788-af39-46420f52ce98.jpg" alt="Business card 45" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/45_card1_9d2da64d-a246-4788-af39-46420f52ce98.jpg" alt="Card 45" onclick="openLightbox(this.src)">
+<div class="sname">贵州佑远木业有限公司</div>
 <div class="sinfo">
-<strong>Supplier #45</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">颜加伟</span><br>
+📞 133 9983 5678<br>
+📍 贵州省赤水市成渝(赤水)家居产业园A3-2<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/45_product1_bddf1fe6-a239-4f7b-a65c-c415e169bab3.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1034,11 +1170,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#46</div>
-<img class="sbc" src="cards_clean/46_card1_824b5e8e-2e63-4f03-ad78-8ddab424df49.jpg" alt="Business card 46" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/46_card1_824b5e8e-2e63-4f03-ad78-8ddab424df49.jpg" alt="Card 46" onclick="openLightbox(this.src)">
+<div class="sname">MOERSHU 摩尔舒卫浴</div>
 <div class="sinfo">
-<strong>Supplier #46</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Thea</span><br>
+📞 13957622087<br>
+🌐 <a href="https://www.moershu.com" target="_blank" style="color:var(--blue)">www.moershu.com</a><br>
+📍 777 Shanzhuan Road, Zhujiajiao Industrial Park, Qingpu District, Shanghai, China; No. 399 Haiyun Roa...<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/46_product1_82730ff1-08ec-4e59-890f-5a7617a712cf.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1056,11 +1196,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#47</div>
-<img class="sbc" src="cards_clean/47_card1_364b192a-4c0b-49e6-bcb2-a05b9bc71d83.jpg" alt="Business card 47" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/47_card1_364b192a-4c0b-49e6-bcb2-a05b9bc71d83.jpg" alt="Card 47" onclick="openLightbox(this.src)">
+<div class="sname">江西荣科新型材料有限公司 (JIANGXI RONGKE NEW BUILDING MATERIALS CO., LTD)</div>
 <div class="sinfo">
-<strong>Supplier #47</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Lucy Zeng (曾露)</span><br>
+📞 +86-13134020034<br>
+🌐 <a href="https://https://www.amerdecor.com/" target="_blank" style="color:var(--blue)">https://www.amerdecor.com/</a><br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/47_product1_25b89c81-cc3b-4dfe-87f7-1f46cb1d1d2d.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1078,11 +1221,11 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#48</div>
-<img class="sbc" src="cards_clean/48_card1_eb85972f-da3f-4c80-a204-fd204c0d9051.jpg" alt="Business card 48" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/48_card1_eb85972f-da3f-4c80-a204-fd204c0d9051.jpg" alt="Card 48" onclick="openLightbox(this.src)">
+<div class="sname">Supplier #48</div>
 <div class="sinfo">
-<strong>Supplier #48</strong>
-<div class="pl">3 товаров</div>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/48_product1_40fe8e75-ed0f-4188-97d0-427ee2bafd17.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1100,11 +1243,11 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#49</div>
-<img class="sbc" src="cards_clean/49_card1_18758511-a4c5-4f48-a712-d4eee15f23cd.jpg" alt="Business card 49" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/49_card1_18758511-a4c5-4f48-a712-d4eee15f23cd.jpg" alt="Card 49" onclick="openLightbox(this.src)">
+<div class="sname">东风汽车</div>
 <div class="sinfo">
-<strong>Supplier #49</strong>
-<div class="pl">3 товаров</div>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/49_product1_dd1d9eb0-6bae-40ca-89b3-c936786d6afa.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1122,11 +1265,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#50</div>
-<img class="sbc" src="cards_clean/50_card1_6d97eb7b-7cfc-45f6-9eda-d997a667f757.jpg" alt="Business card 50" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/50_card1_6d97eb7b-7cfc-45f6-9eda-d997a667f757.jpg" alt="Card 50" onclick="openLightbox(this.src)">
+<div class="sname">CHANGZHOU YOUCARE DECORATION ENGINEERING CO.,LTD.</div>
 <div class="sinfo">
-<strong>Supplier #50</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Eric Huang</span><br>
+📞 13813551160<br>
+🌐 <a href="https://www.ycpanel.com" target="_blank" style="color:var(--blue)">www.ycpanel.com</a><br>
+📍 #28. Changzhou East Road, Henglin Town, Changzhou City, Jiangsu, China<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/50_product1_889ec217-f79a-459e-bec9-ba2b35c0cb4b.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1144,11 +1291,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#51</div>
-<img class="sbc" src="cards_clean/51_card1_507bf4b5-7450-44c3-a6cc-dcc320fe1cce.jpg" alt="Business card 51" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/51_card1_507bf4b5-7450-44c3-a6cc-dcc320fe1cce.jpg" alt="Card 51" onclick="openLightbox(this.src)">
+<div class="sname">江西瑞京鸿兴实业有限公司</div>
 <div class="sinfo">
-<strong>Supplier #51</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">朱友群</span><br>
+📞 13763963598<br>
+🌐 <a href="https://www.jx-wpc.com" target="_blank" style="color:var(--blue)">www.jx-wpc.com</a><br>
+📍 江西省瑞金市经济开发区创业一路东侧<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/51_product1_3e13dab9-7b3d-40d8-aab3-efb0744d32cd.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1166,11 +1317,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#52</div>
-<img class="sbc" src="cards_clean/52_card1_8744294f-4df7-4e63-9a7a-a3b5becd9f4d.jpg" alt="Business card 52" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/52_card1_8744294f-4df7-4e63-9a7a-a3b5becd9f4d.jpg" alt="Card 52" onclick="openLightbox(this.src)">
+<div class="sname">ciarra</div>
 <div class="sinfo">
-<strong>Supplier #52</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Linda</span><br>
+📞 +86 1882 9964 960 / +86 1343 2639 580<br>
+🌐 <a href="https://www.ciarrahome.com" target="_blank" style="color:var(--blue)">www.ciarrahome.com</a><br>
+📍 Poly Center, Room 1703, 5 Linjiang Avenue, Tianhe, Guangzhou, Guangdong, China, 510623<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/52_product1_e8082191-b049-4f16-b5eb-f8e7a5113c48.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1188,11 +1343,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#53</div>
-<img class="sbc" src="cards_clean/53_card1_79983a59-e1d7-4135-b224-5fd35f635954.jpg" alt="Business card 53" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/53_card1_79983a59-e1d7-4135-b224-5fd35f635954.jpg" alt="Card 53" onclick="openLightbox(this.src)">
+<div class="sname">Xuancheng Hengxin Sanitary Ware Co., Ltd</div>
 <div class="sinfo">
-<strong>Supplier #53</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Anne</span><br>
+📞 18656330093<br>
+🌐 <a href="https://https://ck-bath.com/" target="_blank" style="color:var(--blue)">https://ck-bath.com/</a><br>
+📍 Yangyin Avenue, Xiangyang Town, Xuanzhou District, Xuancheng City, Anhui Province<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/53_product1_f75490ce-31b7-4128-835a-0af2fdecd315.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1210,11 +1369,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#54</div>
-<img class="sbc" src="cards_clean/54_card1_3e180bc3-f2d4-4517-a15d-00926e85b846.jpg" alt="Business card 54" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/54_card1_3e180bc3-f2d4-4517-a15d-00926e85b846.jpg" alt="Card 54" onclick="openLightbox(this.src)">
+<div class="sname">佛山市旌晨铝门窗有限公司</div>
 <div class="sinfo">
-<strong>Supplier #54</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">胡光辉</span><br>
+📞 18128752879<br>
+📍 佛山市狮山镇谭边工业区崩岗头路四号之一<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/54_product1_cd4ca2d1-7a98-4cf6-9e0c-b5c2387563fd.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1232,11 +1394,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#55</div>
-<img class="sbc" src="cards_clean/55_card1_912f16e6-f89c-4943-942a-f9b08883719f.jpg" alt="Business card 55" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/55_card1_912f16e6-f89c-4943-942a-f9b08883719f.jpg" alt="Card 55" onclick="openLightbox(this.src)">
+<div class="sname">河南贝迪塑业有限公司 (HENAN BEIDI PLASTIC INDUSTRY CO., LTD.)</div>
 <div class="sinfo">
-<strong>Supplier #55</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">代桂菊 (Cathy Dai)</span><br>
+📞 +86 151 3737 2072<br>
+🌐 <a href="https://www.baydeegroup.com" target="_blank" style="color:var(--blue)">www.baydeegroup.com</a><br>
+📍 中国河南省鹤壁市 (HEBI CITY, HENAN PROVINCE, CHINA)<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/55_product1_092686c0-61ee-4999-a635-ed179d183ad3.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1254,14 +1420,16 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#56</div>
-<img class="sbc" src="cards_clean/56_card1_236efcb5-085c-477b-9868-783fae744aec.jpg" alt="Business card 56" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/56_card1_236efcb5-085c-477b-9868-783fae744aec.jpg" alt="Card 56" onclick="openLightbox(this.src)">
+<div class="sname">佛山市旌晨铝门窗有限公司</div>
 <div class="sinfo">
-<strong>Supplier #56</strong>
-<div class="pl">1 товаров</div>
+👤 <span class="label">张广帅</span><br>
+📞 13726358587, 400-9155262<br>
+📍 佛山市狮山镇谭边工业区顾岗头路四号之一<br>
 </div>
+<div class="pl">1 товаров</div>
 <div class="products">
 <div class="pc">
-<img src="cards_clean/56_card1_236efcb5-085c-477b-9868-783fae744aec.jpg" alt="Card 1" onclick="event.stopPropagation();openLightbox(this.src)">
 <div class="pi"><strong>Покупатель / байер:</strong> Индивидуальный от размеров. Нет уен конкретных у всех поставщиков. Все делается под заказ и производится от 1 шт.</div>
 </div>
 <div class="pc">
@@ -1269,18 +1437,20 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 <div class="pi"><strong>Покупатель / байер:</strong> Индивидуальный от размеров. Нет уен конкретных у всех поставщиков. Все делается под заказ и производится от 1 шт.</div>
 </div>
 <div class="pc">
-<img src="cards_clean/56_card3_8f532d6d-ccb6-47b4-b0ed-a032790ad496.jpg" alt="Card 3" onclick="event.stopPropagation();openLightbox(this.src)">
 <div class="pi"><strong>Покупатель / байер:</strong> Индивидуальный от размеров. Нет уен конкретных у всех поставщиков. Все делается под заказ и производится от 1 шт.</div>
 </div>
 </div>
 </section>
 <section class="card">
 <div class="snum">#57</div>
-<img class="sbc" src="cards_clean/57_card1_23837467-e670-4d6f-bab5-b2bd62c9697e.jpg" alt="Business card 57" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/57_card1_23837467-e670-4d6f-bab5-b2bd62c9697e.jpg" alt="Card 57" onclick="openLightbox(this.src)">
+<div class="sname">景德镇窑珍陶瓷</div>
 <div class="sinfo">
-<strong>Supplier #57</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">徐云霞</span><br>
+📞 13697981203<br>
+📍 店面地址：江西省景德镇市国贸广场国贸街1号；厂址：吕蒙高新工业园沟上008号<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/57_product1_6d94692b-cd2b-43df-95ff-b26c8bcfa85e.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1298,11 +1468,11 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#58</div>
-<img class="sbc" src="cards_clean/58_card1_f9ace309-11f1-453a-9245-dd569a1dfb81.jpg" alt="Business card 58" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/58_card1_f9ace309-11f1-453a-9245-dd569a1dfb81.jpg" alt="Card 58" onclick="openLightbox(this.src)">
+<div class="sname">湖北龙王垭茶业有限公司</div>
 <div class="sinfo">
-<strong>Supplier #58</strong>
-<div class="pl">3 товаров</div>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/58_product1_5cfa3b4b-6c8d-4d65-9602-d49c07c909fe.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1320,11 +1490,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#59</div>
-<img class="sbc" src="cards_clean/59_card1_b5911a32-479f-4a28-b13d-00ff81a016a8.jpg" alt="Business card 59" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/59_card1_b5911a32-479f-4a28-b13d-00ff81a016a8.jpg" alt="Card 59" onclick="openLightbox(this.src)">
+<div class="sname">聖羅蘭·衛浴 (Sannora)</div>
 <div class="sinfo">
-<strong>Supplier #59</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">ALLEN XU (许熙平)</span><br>
+📞 +86 137 0224 0244<br>
+🌐 <a href="https://www.sannora.com" target="_blank" style="color:var(--blue)">www.sannora.com</a><br>
+📍 Tangxia Ind. Zone, Shishan Town, Nanhai Dist., Foshan, Guangdong, China<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/59_product1_90404936-5453-4107-a73f-d83312fe3e22.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1342,11 +1516,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#60</div>
-<img class="sbc" src="cards_clean/60_card1_0ea06a3e-e204-46da-9775-936a72e015c7.jpg" alt="Business card 60" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/60_card1_0ea06a3e-e204-46da-9775-936a72e015c7.jpg" alt="Card 60" onclick="openLightbox(this.src)">
+<div class="sname">ZHEJIANG SEATING TECHNOLOGY CO., LTD.</div>
 <div class="sinfo">
-<strong>Supplier #60</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">May Zhang</span><br>
+📞 +86 182 5727 1590<br>
+🌐 <a href="https://www.zjseating.com" target="_blank" style="color:var(--blue)">www.zjseating.com</a><br>
+📍 150 Taining Road, TianZiHu Industrial Area, Anji, Huzhou, Zhejiang, China. Post Code: 313300<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/60_product1_23bf9314-5109-4935-b7de-2e45eb7f4db6.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1364,11 +1542,11 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#61</div>
-<img class="sbc" src="cards_clean/61_card1_87698912-0fd2-4e25-aec6-9b095dda3c09.jpg" alt="Business card 61" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/61_card1_87698912-0fd2-4e25-aec6-9b095dda3c09.jpg" alt="Card 61" onclick="openLightbox(this.src)">
+<div class="sname">Supplier #61</div>
 <div class="sinfo">
-<strong>Supplier #61</strong>
-<div class="pl">3 товаров</div>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/61_product1_b533180c-9455-481c-b072-d0594f3537fe.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1386,11 +1564,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#62</div>
-<img class="sbc" src="cards_clean/62_card1_9f75ad15-edc7-40d8-be37-e8a9907f2316.jpg" alt="Business card 62" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/62_card1_9f75ad15-edc7-40d8-be37-e8a9907f2316.jpg" alt="Card 62" onclick="openLightbox(this.src)">
+<div class="sname">佛山市同路匠人家具有限公司</div>
 <div class="sinfo">
-<strong>Supplier #62</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">蒙玉婷</span><br>
+📞 13160953218<br>
+📍 广东省佛山市顺德区龙江镇联盟路三路3号9513家具总部<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/62_product1_d020bc5d-d3f9-4fab-b9c3-bf3fe50e47f6.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1408,11 +1589,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#63</div>
-<img class="sbc" src="cards_clean/63_card1_630491ed-60c9-4422-af4e-5b959e35f8d9.jpg" alt="Business card 63" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/63_card1_630491ed-60c9-4422-af4e-5b959e35f8d9.jpg" alt="Card 63" onclick="openLightbox(this.src)">
+<div class="sname">HONGKONG PINGAO INDUSTRIAL CO., LTD / PINGAO HARDWARE & PLASTIC PRODUCTS FACTORY</div>
 <div class="sinfo">
-<strong>Supplier #63</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Pacao Yin</span><br>
+📞 (0086)13903035682 / (0086)0769-86378283<br>
+🌐 <a href="https://www.pingaolao.com / https://dgpingao.1688.com" target="_blank" style="color:var(--blue)">www.pingaolao.com / https://dgpingao.1688.com</a><br>
+📍 NO.5 JINTAN SECOND STREET, SHANGWU INDUSTRIAL, SHIJIE TOWN, DONGGUAN, GUANGDONG, CHINA<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/63_product1_6de49b9b-6b5d-4834-805c-e3d8723b6808.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1430,11 +1615,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#64</div>
-<img class="sbc" src="cards_clean/64_card1_36ab9583-8cb0-4d64-ace6-fa85af4d43ca.jpg" alt="Business card 64" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/64_card1_36ab9583-8cb0-4d64-ace6-fa85af4d43ca.jpg" alt="Card 64" onclick="openLightbox(this.src)">
+<div class="sname">佛山市同路匠人家具有限公司</div>
 <div class="sinfo">
-<strong>Supplier #64</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">肖汝兰</span><br>
+📞 18675197017<br>
+📍 广东省佛山市顺德区龙江镇联盟嘉园三路3号9513家具总部<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/64_product1_ff02c4aa-6c65-4ced-9792-139f2437a57d.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1452,11 +1640,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#65</div>
-<img class="sbc" src="cards_clean/65_card1_65fb1299-850c-41e4-8158-d6f4c8d1a6ff.jpg" alt="Business card 65" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/65_card1_65fb1299-850c-41e4-8158-d6f4c8d1a6ff.jpg" alt="Card 65" onclick="openLightbox(this.src)">
+<div class="sname">浙江鑫东洁具有限公司 (ZHEJIANG XINDONG SANITARY WARE CO., LTD.)</div>
 <div class="sinfo">
-<strong>Supplier #65</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">冯晶晶 Joanna</span><br>
+📞 0086-159 9067 6107<br>
+📍 Xuanmen Industrial Zone, Yuhuan, Zhejiang, China, 317608<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/65_product1_4020fe5b-1b93-4d6d-a347-bb76380136b0.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1474,11 +1665,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#66</div>
-<img class="sbc" src="cards_clean/66_card1_4ca02c4f-db5d-4c91-b672-3db8f83d300b.jpg" alt="Business card 66" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/66_card1_4ca02c4f-db5d-4c91-b672-3db8f83d300b.jpg" alt="Card 66" onclick="openLightbox(this.src)">
+<div class="sname">Chongnuo(Shandong)NewMaterial Co.,Ltd.</div>
 <div class="sinfo">
-<strong>Supplier #66</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Daisy</span><br>
+📞 +86 19906379675<br>
+🌐 <a href="https://www.chongnuo-floors.com" target="_blank" style="color:var(--blue)">www.chongnuo-floors.com</a><br>
+📍 Qingyun County, Dezhou City, China<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/66_product1_93be1328-26d5-4918-87cc-1500a12fbdd8.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1496,11 +1691,13 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#67</div>
-<img class="sbc" src="cards_clean/67_card1_6de0f86d-2f74-4ae6-8ed5-1064a3529c89.jpg" alt="Business card 67" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/67_card1_6de0f86d-2f74-4ae6-8ed5-1064a3529c89.jpg" alt="Card 67" onclick="openLightbox(this.src)">
+<div class="sname">ZHE JIANG TIANYAN HOLDING LTD</div>
 <div class="sinfo">
-<strong>Supplier #67</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">NICOLE</span><br>
+📍 TAIZHOU, ZHEJIANG<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/67_product1_052c0342-a475-4300-8ec2-f2cf4f9bc387.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1518,11 +1715,14 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#68</div>
-<img class="sbc" src="cards_clean/68_card1_ea6e9e06-1713-47af-9b23-119ba4e9422e.jpg" alt="Business card 68" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/68_card1_ea6e9e06-1713-47af-9b23-119ba4e9422e.jpg" alt="Card 68" onclick="openLightbox(this.src)">
+<div class="sname">中国广东柜邦精密金属制品有限公司 (China Guangdong Guibang Precision Metal Products Co.Ltd)</div>
 <div class="sinfo">
-<strong>Supplier #68</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">唐一智 (JUNIOR)</span><br>
+📞 +86-156-2562-1155<br>
+📍 Jieyang City, Guangdong Province Jiedong Longwei high-tech Zone industrial Park<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/68_product1_928b29e8-6e64-4021-b5f6-6c81981e4f1f.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1540,11 +1740,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#69</div>
-<img class="sbc" src="cards_clean/69_card1_f449baf7-97c8-4810-8f8c-ffe2356b315b.jpg" alt="Business card 69" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/69_card1_f449baf7-97c8-4810-8f8c-ffe2356b315b.jpg" alt="Card 69" onclick="openLightbox(this.src)">
+<div class="sname">广东亚当斯金属精密制造有限公司 (Guangdong Adams Metal Precision Manufacturing Co., Ltd.)</div>
 <div class="sinfo">
-<strong>Supplier #69</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Kelly Liang 梁凯莹</span><br>
+📞 +86-180-2935-2895 / +86-757-25331912<br>
+🌐 <a href="https://www.adamsmetal.com.cn" target="_blank" style="color:var(--blue)">www.adamsmetal.com.cn</a><br>
+📍 广东省佛山市顺德区勒流镇港口路10号 (No.10, Gangkou Road, Leliu Town, Shunde District, Foshan City, Guangdong Provinc...<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/69_product1_d73a61e1-c9f8-48ce-9be1-1b5aa249bd24.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1562,11 +1766,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#70</div>
-<img class="sbc" src="cards_clean/70_card1_7be36265-c19d-4799-8282-9870fd926339.jpg" alt="Business card 70" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/70_card1_7be36265-c19d-4799-8282-9870fd926339.jpg" alt="Card 70" onclick="openLightbox(this.src)">
+<div class="sname">多彩帐篷 (DUOCAI TENT)</div>
 <div class="sinfo">
-<strong>Supplier #70</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Jimmy 黄锦民</span><br>
+📞 +86-766-8298662, (86)133 2294 8506<br>
+🌐 <a href="https://www.dc-tent.com, www.sdduocaizp.com" target="_blank" style="color:var(--blue)">www.dc-tent.com, www.sdduocaizp.com</a><br>
+📍 广东省云浮市云安区佛山(云浮)产业转移工业园86号 / No.86 Foshan(Yunfu) Industrial transfer park, Yunan, Yunfu, Guangdong, C...<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/70_product1_0c10cad1-0801-4ce1-8b80-5f43eca23e65.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1584,11 +1792,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#71</div>
-<img class="sbc" src="cards_clean/71_card1_b6698c1c-e570-4c0e-8dcc-c6c3e1725d9e.jpg" alt="Business card 71" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/71_card1_b6698c1c-e570-4c0e-8dcc-c6c3e1725d9e.jpg" alt="Card 71" onclick="openLightbox(this.src)">
+<div class="sname">河北天丰金属制品有限公司 (Hebei Tianfeng Metal Products Co., Ltd.)</div>
 <div class="sinfo">
-<strong>Supplier #71</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">孟少美 (Elie Meng)</span><br>
+📞 13103196326<br>
+🌐 <a href="https://www.hbtfjs.com" target="_blank" style="color:var(--blue)">www.hbtfjs.com</a><br>
+📍 河北省隆尧县公子村工业区 (Gongzi Village Industry Zone, Longyao County, Xingtai City, Hebei, China)<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/71_product1_c8a6925f-1f8d-4fc8-ac39-f40782eedede.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1606,11 +1818,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#72</div>
-<img class="sbc" src="cards_clean/72_card1_5f117fa6-8032-48c2-a8dc-da1553a8887c.jpg" alt="Business card 72" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/72_card1_5f117fa6-8032-48c2-a8dc-da1553a8887c.jpg" alt="Card 72" onclick="openLightbox(this.src)">
+<div class="sname">广州蒙娜丽莎卫浴股份有限公司</div>
 <div class="sinfo">
-<strong>Supplier #72</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">伍乐彤</span><br>
+📞 86 13711117863<br>
+🌐 <a href="https://www.monalisa.cn" target="_blank" style="color:var(--blue)">www.monalisa.cn</a><br>
+📍 广州市花都区花东镇港头工业区4号<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/72_product1_a2a28ee7-4f95-4259-a4ce-c0eb57a1c1c8.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1628,11 +1844,13 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#73</div>
-<img class="sbc" src="cards_clean/73_card1_90021bb0-7a9c-4ee1-89a3-92925f1d6de8.jpg" alt="Business card 73" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/73_card1_90021bb0-7a9c-4ee1-89a3-92925f1d6de8.jpg" alt="Card 73" onclick="openLightbox(this.src)">
+<div class="sname">广西中晨木业有限公司 (Guangxi Zhongchen Wood Industry Co., Ltd.)</div>
 <div class="sinfo">
-<strong>Supplier #73</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">张爱彬 (Zhang Aibin)</span><br>
+📞 +86 18178085851<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/73_product1_44e43462-4495-4018-af81-0f36818c06fc.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1650,11 +1868,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#74</div>
-<img class="sbc" src="cards_clean/74_card1_c599498e-5c40-4b79-9b8b-ad1b892f51e3.jpg" alt="Business card 74" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/74_card1_c599498e-5c40-4b79-9b8b-ad1b892f51e3.jpg" alt="Card 74" onclick="openLightbox(this.src)">
+<div class="sname">浙江安吉双虎竹木业有限公司</div>
 <div class="sinfo">
-<strong>Supplier #74</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">周瑶琳</span><br>
+📞 +86-137 3822 8209<br>
+🌐 <a href="https://www.tigerbamboo.com / www.nuodibm.com" target="_blank" style="color:var(--blue)">www.tigerbamboo.com / www.nuodibm.com</a><br>
+📍 浙江省湖州市安吉县孝丰镇大竹村<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/74_product1_e42460c4-4f41-4732-8f18-77b5989316d9.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1672,11 +1894,15 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 <section class="card">
 <div class="snum">#75</div>
-<img class="sbc" src="cards_clean/75_card1_2affcb12-67f5-4be5-bbbb-ad98a7e4dc68.jpg" alt="Business card 75" onclick="openLightbox(this.src)">
+<img class="sbc" src="cards_clean/75_card1_2affcb12-67f5-4be5-bbbb-ad98a7e4dc68.jpg" alt="Card 75" onclick="openLightbox(this.src)">
+<div class="sname">宏宇集团 (HONGYU GROUP)</div>
 <div class="sinfo">
-<strong>Supplier #75</strong>
-<div class="pl">3 товаров</div>
+👤 <span class="label">Melina 王玲</span><br>
+📞 +86 13827702216<br>
+🌐 <a href="https://en.hongyugroup.com" target="_blank" style="color:var(--blue)">en.hongyugroup.com</a><br>
+📍 广东省佛山市禅城区江湾二路26号 (No.26 Jiangwan Second Road, Chancheng District, Foshan, Guangdong)<br>
 </div>
+<div class="pl">3 товаров</div>
 <div class="products">
 <div class="pc">
 <img src="cards_clean/75_product1_103819a8-4dac-43de-89a9-9f0620752630.jpg" alt="Product 1" onclick="event.stopPropagation();openLightbox(this.src)">
@@ -1694,14 +1920,11 @@ header p{color:var(--secondary);font-size:14px;margin-top:4px}
 </section>
 </div>
 </main>
-
-<!-- Lightbox -->
 <div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.9);z-index:1000;align-items:center;justify-content:center;padding:20px">
-<img id="lightboxImg" style="max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,.3)">
+<img id="lightboxImg" style="max-width:90vw;max-height:90vh;border-radius:8px">
 </div>
-
 <script>
-function openLightbox(src){var l=document.getElementById('lightbox');l.style.display='flex';document.getElementById('lightboxImg').src=src}
+function openLightbox(s){document.getElementById('lightbox').style.display='flex';document.getElementById('lightboxImg').src=s}
 function closeLightbox(){document.getElementById('lightbox').style.display='none'}
 document.getElementById('lightbox').onclick=function(){this.style.display='none'}
 </script>
