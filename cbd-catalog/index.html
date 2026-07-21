@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Каталог поставщиков | CBD Expo 2026</title>
+<title>Каталог поставщиков | CBD Guangzhou 2026</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 :root{--apple-blue:#0071e3;--apple-blue-hover:#0077ed;--apple-gray-1:#f5f5f7;--apple-gray-2:#e8e8ed;--apple-gray-3:#d2d2d7;--apple-gray-4:#86868b;--apple-gray-5:#1d1d1f;--apple-white:#fff;--apple-radius:18px;--apple-shadow:0 2px 12px rgba(0,0,0,.06);--apple-transition:all .2s ease;--apple-max-width:1100px;--apple-font:'Inter','SF Pro Display',-apple-system,BlinkMacSystemFont,sans-serif}
@@ -23,6 +23,16 @@ body{font-family:var(--apple-font);background:var(--apple-gray-1);color:var(--ap
 .sb>div{background:var(--apple-white);border-radius:18px;padding:16px 24px;box-shadow:var(--apple-shadow);flex:1;min-width:120px;text-align:center}
 .sv{font-size:1.8em;font-weight:700;color:var(--apple-blue)}
 .sl{font-size:.8em;color:var(--apple-gray-4)}
+.intro{background:var(--apple-white);border-radius:var(--apple-radius);padding:24px;margin-bottom:20px;box-shadow:var(--apple-shadow)}
+.intro h2{font-size:1.15em;font-weight:700;margin-bottom:12px}
+.intro p{font-size:.85em;color:var(--apple-gray-4);line-height:1.6;margin-bottom:6px}
+.search-wrap{background:var(--apple-white);border-radius:var(--apple-radius);padding:16px 24px;margin-bottom:20px;box-shadow:var(--apple-shadow)}
+#searchBox{width:100%;padding:12px 16px;border:2px solid var(--apple-gray-2);border-radius:14px;font-size:1em;font-family:inherit;outline:none}
+#searchBox:focus{border-color:var(--apple-blue)}
+.cat-filters{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.cat-btn{padding:5px 14px;border-radius:100px;border:1px solid var(--apple-gray-2);background:var(--apple-white);font-size:.8em;cursor:pointer;transition:var(--apple-transition);font-family:inherit}
+.cat-btn:hover{background:var(--apple-blue);color:#fff;border-color:var(--apple-blue)}
+.cat-btn.active{background:var(--apple-blue);color:#fff;border-color:var(--apple-blue)}
 section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padding:24px;margin-bottom:20px;box-shadow:var(--apple-shadow)}
 .shd{display:flex;gap:16px;margin-bottom:16px}
 .snum{background:var(--apple-gray-5);color:#fff;min-width:32px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.9em;flex-shrink:0}
@@ -31,10 +41,10 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 .sbc:hover{transform:scale(1.03)}
 .sinfo{flex:1;min-width:0}
 .sname{font-size:1.1em;font-weight:700;margin-bottom:6px;line-height:1.3}
+.ctag{display:inline-block;padding:3px 10px;border-radius:100px;font-size:.75em;background:#f0f0f5;color:#555;margin:2px;font-weight:500}
 .ci{font-size:.85em;color:var(--apple-gray-4);margin:3px 0;word-break:break-word}
 .ci .ic{width:20px;display:inline-block}
 .ci a{color:var(--apple-blue);text-decoration:none}
-.ci a:hover{text-decoration:underline}
 .pl{font-size:.8em;color:var(--apple-gray-4);margin:10px 0}
 .products{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-top:16px;padding-top:16px;border-top:1px solid var(--apple-gray-2)}
 .pc{background:#fafafa;border-radius:12px;overflow:hidden;border:1px solid var(--apple-gray-2)}
@@ -46,14 +56,15 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 .lb{display:none;position:fixed;z-index:9999;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);cursor:pointer;justify-content:center;align-items:center}
 .lb img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:8px}
 .lb.show{display:flex}
+.py{font-size:.8em;color:var(--apple-gray-4);font-style:italic}
 </style>
 </head>
 <body>
 <div class="hero">
 <div class="hi">
 <div class="ht">
-<h1>🌿 CBD Expo — Каталог поставщиков</h1>
-<div class="sub">75 поставщиков · 223 товаров</div>
+<h1>🏗️ CBD Guangzhou 2026 — Каталог поставщиков</h1>
+<div class="sub">75 поставщиков · 11 категорий</div>
 </div>
 <div class="hm">
 <a href="cbd_suppliers.xlsx" class="dl" download>📥 Скачать Excel</a>
@@ -65,18 +76,49 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 <div class="container">
+
+<!-- Stats -->
 <div class="sb">
 <div><div class="sv">75</div><div class="sl">Поставщиков</div></div>
-<div><div class="sv">223</div><div class="sl">Товаров</div></div>
-<div><div class="sv">71</div><div class="sl">Компаний</div></div>
-<div><div class="sv">62</div><div class="sl">Контактов</div></div>
+<div><div class="sv">11</div><div class="sl">Категорий</div></div>
+<div><div class="sv">2,000+</div><div class="sl">Экспонентов</div></div>
+<div><div class="sv">200K+</div><div class="sl">Посетителей</div></div>
 </div>
-<section class="sup">
+
+<!-- Exhibition Brief -->
+<div class="intro">
+<h2>📋 О выставке: China (Guangzhou) International Building Decoration Fair</h2>
+<p>中国(广州)国际建筑装饰博览会</p>
+<p>📅 8–11 July 2026 · 📍 Canton Fair Complex (Pazhou) · Guangzhou, China</p>
+<p>🏢 2,000+ экспонентов · 👥 200,000+ посетителей · 📐 Площадь: 300,000+ sqm</p>
+<p>🏷️ Категории: Building Decoration, Home Furnishing, Smart Home, Doors & Windows, Bath & Sanitary Ware, Hardware & Machinery, Coatings & Materials, Interior Design</p>
+</div>
+
+<!-- Search & Category Filters -->
+<div class="search-wrap">
+<input type="text" id="searchBox" placeholder="🔍 Поиск по компаниям, категориям..." oninput="filterCards()">
+<div class="cat-filters" id="catFilters">
+<button class="cat-btn active" onclick="filterByCat('all',this)">Все</button>
+<button class="cat-btn" onclick="filterByCat('Bath',this)">Bath</button>
+<button class="cat-btn" onclick="filterByCat('Building',this)">Building</button>
+<button class="cat-btn" onclick="filterByCat('Coatings',this)">Coatings</button>
+<button class="cat-btn" onclick="filterByCat('Decoration',this)">Decoration</button>
+<button class="cat-btn" onclick="filterByCat('Doors',this)">Doors</button>
+<button class="cat-btn" onclick="filterByCat('Furnishing',this)">Furnishing</button>
+<button class="cat-btn" onclick="filterByCat('General',this)">General</button>
+<button class="cat-btn" onclick="filterByCat('Hardware',this)">Hardware</button>
+<button class="cat-btn" onclick="filterByCat('Packaging',this)">Packaging</button>
+<button class="cat-btn" onclick="filterByCat('Smart',this)">Smart</button>
+<button class="cat-btn" onclick="filterByCat('Windows',this)">Windows</button>
+</div>
+</div>
+<section class="sup" data-cat="Windows">
 <div class="shd">
 <div class="snum">1</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/1_card1_4469badb-018b-4850-bcba-0daae28b155a.jpg" alt="Card 1" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Sunhohi</div>
+<span class="ctag">Windows</span>
 <div class="ci"><span class="ic">👤</span>Crystal Wong</div>
 <div class="ci"><span class="ic">📞</span>+86-137 0262 5097</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.sunhohiwindow.com" target="_blank">www.sunhohiwindow.com</a></div>
@@ -99,12 +141,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Windows">
 <div class="shd">
 <div class="snum">2</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/2_card1_e7a763b9-313a-44d2-8d7b-f904fe28f576.jpg" alt="Card 2" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Поставщик #2</div>
+<span class="ctag">Windows</span>
 </div>
 </div>
 <div class="pl">3 товаров</div>
@@ -123,12 +166,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Windows">
 <div class="shd">
 <div class="snum">3</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/3_card1_d527edd4-e494-4c30-985c-92cf81c2efec.jpg" alt="Card 3" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Guangzhou NewHoo Technology Co. Ltd</div>
+<span class="ctag">Windows</span>
 <div class="ci"><span class="ic">👤</span>Tony</div>
 <div class="ci"><span class="ic">📞</span>+86-198-7837-3626</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.gznewhoo.com" target="_blank">www.gznewhoo.com</a></div>
@@ -151,12 +195,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Smart">
 <div class="shd">
 <div class="snum">4</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/4_card1_560d8ab6-9408-4b58-be99-5899f6efdfd1.jpg" alt="Card 4" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">榜威电子科技（上海）有限公司 (Bweetech Electronics Technology (Shanghai) Co., Ltd)</div>
+<span class="ctag">Smart</span>
 <div class="ci"><span class="ic">👤</span>骆剑 (Kim Lok)</div>
 <div class="ci"><span class="ic">📞</span>186-5759-0678</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.bweetech.com" target="_blank">www.bweetech.com</a></div>
@@ -179,12 +224,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Windows">
 <div class="shd">
 <div class="snum">5</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/5_card1_49a87fa2-1bbe-46de-b302-0aaff0eef377.jpg" alt="Card 5" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">DEIOUX WINDOWS & DOORS</div>
+<span class="ctag">Windows</span>
 <div class="ci"><span class="ic">👤</span>CANDICE CHOU</div>
 <div class="ci"><span class="ic">📞</span>+86-13392246940</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://WWW.DEIOUXWINDOWS.COM" target="_blank">WWW.DEIOUXWINDOWS.COM</a></div>
@@ -206,12 +252,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">6</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/6_card1_b86c8e19-6a93-41db-910c-ddd4950b00ee.jpg" alt="Card 6" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Zhongshan Smartek Security Technology Co.,LTD</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>Tim Pan</div>
 <div class="ci"><span class="ic">📞</span>+86-15889896019</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.smarteklock.com" target="_blank">www.smarteklock.com</a></div>
@@ -234,12 +281,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Coatings">
 <div class="shd">
 <div class="snum">7</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/7_card1_1c171c5b-6474-452f-9ba5-9401bf3f2dcc.jpg" alt="Card 7" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Поставщик #7</div>
+<span class="ctag">Coatings</span>
 </div>
 </div>
 <div class="pl">3 товаров</div>
@@ -258,12 +306,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">8</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/8_card1_2c3c957b-ff66-42d2-af03-29d5ca6d4aff.jpg" alt="Card 8" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">浙江鑫东洁具有限公司 (ZHEJIANG XINDONG SANITARY WARE CO., LTD.)</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>曾燕燕 Elyn</div>
 <div class="ci"><span class="ic">📞</span>0086-182 5765 3405</div>
 <div class="ci"><span class="ic">📍</span>Xuanmen Industrial Zone, Yuhuan, Zhejiang, China, 317608</div>
@@ -284,12 +333,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">9</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/9_card1_34858f0e-c8ca-432e-ad54-e44906ca6f0c.jpg" alt="Card 9" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">NIFO 耐孚</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>顾鹏</div>
 <div class="ci"><span class="ic">📞</span>13326792105</div>
 <div class="ci"><span class="ic">📍</span>佛山市南海区大沥谭边工业区虹岭一路一号（2号厂房）</div>
@@ -311,12 +361,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">10</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/10_card1_dfdf9205-f09d-4c04-8568-670295bed69e.jpg" alt="Card 10" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">温州金锏智能锁具有限公司</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>张丽</div>
 <div class="ci"><span class="ic">📞</span>15057304393</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.jinjianlock.com" target="_blank">www.jinjianlock.com</a></div>
@@ -339,12 +390,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Furnishing">
 <div class="shd">
 <div class="snum">11</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/11_card1_2d455d02-ce2b-43b8-ab29-5f863c2106a6.jpg" alt="Card 11" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">佛山市同路匠人家具有限公司</div>
+<span class="ctag">Furnishing</span>
 <div class="ci"><span class="ic">👤</span>赖华芳</div>
 <div class="ci"><span class="ic">📞</span>13727479513, 400-8339513</div>
 <div class="ci"><span class="ic">📍</span>广东省佛山市顺德区龙江镇联塑嘉园三路3号9513家具总部</div>
@@ -366,12 +418,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">12</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/12_card1_c6376271-e155-4d30-9bac-56383cc610d9.jpg" alt="Card 12" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">中山市福乐门智能科技有限公司</div>
+<span class="ctag">Hardware</span>
 </div>
 </div>
 <div class="pl">3 товаров</div>
@@ -390,12 +443,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Doors">
 <div class="shd">
 <div class="snum">13</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/13_card1_f88a885c-d7c9-4c0c-a7ee-790c8985824e.jpg" alt="Card 13" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">CHINA GUANGCHAO CONTAINER HOUSE</div>
+<span class="ctag">Doors</span>
 <div class="ci"><span class="ic">👤</span>陈洁玲 Rowling</div>
 <div class="ci"><span class="ic">📞</span>+86 189 2997 1329</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.cgchcontainer.com" target="_blank">www.cgchcontainer.com</a></div>
@@ -418,12 +472,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Decoration">
 <div class="shd">
 <div class="snum">14</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/14_card1_8aad0d5c-c5be-4ba9-a508-0816d0a3ecfb.jpg" alt="Card 14" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">广东招材建材科技有限公司</div>
+<span class="ctag">Decoration</span>
 <div class="ci"><span class="ic">👤</span>黎桃桃</div>
 <div class="ci"><span class="ic">📞</span>+8618934320539</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.liblun.com" target="_blank">www.liblun.com</a></div>
@@ -446,12 +501,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">15</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/15_card1_ac154be3-db3c-4431-8b4f-5e0d7a53cd5f.jpg" alt="Card 15" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">广东伟经家居制品有限公司 (Guangdong Wireking Household Products Co., Ltd.)</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>欧阳玉滢 (Sonia Ouyang)</div>
 <div class="ci"><span class="ic">📞</span>+86-13392758223</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.wireking.com" target="_blank">www.wireking.com</a></div>
@@ -474,12 +530,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">16</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/16_card1_ff990944-5899-4dc8-b15a-06b621948726.jpg" alt="Card 16" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">佛山市悠派家居科技有限公司</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>黄伟业</div>
 <div class="ci"><span class="ic">📞</span>13825596371</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.LGPKB.com" target="_blank">www.LGPKB.com</a></div>
@@ -502,12 +559,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Coatings">
 <div class="shd">
 <div class="snum">17</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/17_card1_54b5bcd4-9bc2-4b0f-a8b9-12c10dec6511.jpg" alt="Card 17" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">常州市永春保温材料有限公司</div>
+<span class="ctag">Coatings</span>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.ycbwcl.1688.com" target="_blank">www.ycbwcl.1688.com</a></div>
 <div class="ci"><span class="ic">📍</span>江苏省常州市</div>
 </div>
@@ -528,12 +586,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Decoration">
 <div class="shd">
 <div class="snum">18</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/18_card1_37b18826-c900-4184-8310-6c2d6b2e0bee.jpg" alt="Card 18" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">杭州班昇</div>
+<span class="ctag">Decoration</span>
 <div class="ci"><span class="ic">👤</span>陈卓敏 Ruby</div>
 <div class="ci"><span class="ic">📞</span>+86 13556688832</div>
 </div>
@@ -554,12 +613,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">19</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/19_card1_fdb3004f-9c4c-4069-addf-bde6b2d0c951.jpg" alt="Card 19" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">江门市新阳刚智能科技有限公司</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">📞</span>135 3666 7789, 400-9090-518</div>
 <div class="ci"><span class="ic">📍</span>广东省江门市新会区大泽镇万洋众创城38-1号</div>
 </div>
@@ -580,12 +640,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Bath">
 <div class="shd">
 <div class="snum">20</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/20_card1_c27a2fa4-b90e-46c4-9edf-a06384aad5c4.jpg" alt="Card 20" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">三强地毯 (THREE-STRONG CARPET)</div>
+<span class="ctag">Bath</span>
 <div class="ci"><span class="ic">📞</span>0769-89807692</div>
 </div>
 </div>
@@ -605,12 +666,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">21</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/21_card1_d7f3b2aa-2ace-49ca-af6d-fb2dad4bd95d.jpg" alt="Card 21" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Zhejiang Kehon Intelligent Science & Technology Co., Ltd.</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>Sammi Shi</div>
 <div class="ci"><span class="ic">📞</span>+86 156 8948 5097</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.kehon.cn" target="_blank">www.kehon.cn</a></div>
@@ -633,12 +695,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">22</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/22_card1_e62ea2ae-a3e0-4f81-a622-0130d43bc585.jpg" alt="Card 22" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">CAE SANITARY FITTINGS INDUSTRY CO., LTD. GUANGDONG</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>Josie Guan</div>
 <div class="ci"><span class="ic">📞</span>+86-13702279135</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.china-cae.com" target="_blank">www.china-cae.com</a></div>
@@ -661,12 +724,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Building">
 <div class="shd">
 <div class="snum">23</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/23_card1_2af3db4e-1160-4686-b6cb-e497f63556b8.jpg" alt="Card 23" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">利亚德光电股份有限公司</div>
+<span class="ctag">Building</span>
 <div class="ci"><span class="ic">👤</span>金厚强</div>
 <div class="ci"><span class="ic">📞</span>13510009569, 18829341125, 400-8592-666</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.leyard.com" target="_blank">www.leyard.com</a></div>
@@ -689,12 +753,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Packaging">
 <div class="shd">
 <div class="snum">24</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/24_card1_06e28318-8aa3-47e9-9543-9949433ff111.jpg" alt="Card 24" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Zhejiang Kehon Intelligent Science & Technology Co.,Ltd.</div>
+<span class="ctag">Packaging</span>
 <div class="ci"><span class="ic">👤</span>David</div>
 <div class="ci"><span class="ic">📞</span>+86 157 5573 4990</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.kehon.cn" target="_blank">www.kehon.cn</a></div>
@@ -717,12 +782,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">25</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/25_card1_4edc2219-4ef1-4fa4-aa8f-5356763b7187.jpg" alt="Card 25" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">广州传祺时代智能科技有限公司</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>洪美兰</div>
 <div class="ci"><span class="ic">📞</span>13450298606</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.chuangqitimes.com" target="_blank">www.chuangqitimes.com</a></div>
@@ -745,12 +811,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">26</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/26_card1_099b4f43-a4db-4b2f-ad1c-c5067c89ee34.jpg" alt="Card 26" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Guangdong CAE Sanitary Fittings Co., Ltd.</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>Janice Kuan</div>
 <div class="ci"><span class="ic">📞</span>+86-750-2713118</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.cae.cn" target="_blank">www.cae.cn</a></div>
@@ -773,12 +840,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">27</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/27_card1_b87a6140-29b2-48e4-b4d4-a60e0033fa5a.jpg" alt="Card 27" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">THOR索而</div>
+<span class="ctag">Hardware</span>
 </div>
 </div>
 <div class="pl">3 товаров</div>
@@ -797,12 +865,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">28</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/28_card1_b1b9d88c-d43b-47e3-b1ed-9cbf38a37687.jpg" alt="Card 28" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">JNOD 基诺德</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>周信朋 Joe Zhou</div>
 <div class="ci"><span class="ic">📞</span>+86 199 2825 2201</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.jnodwater.com" target="_blank">www.jnodwater.com</a></div>
@@ -824,12 +893,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Smart">
 <div class="shd">
 <div class="snum">29</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/29_card1_0e3d4204-ae4f-4d9f-9578-c68e23751ddf.jpg" alt="Card 29" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">榜威电子科技（上海）有限公司</div>
+<span class="ctag">Smart</span>
 <div class="ci"><span class="ic">📞</span>021-57715805</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.bweetech.com" target="_blank">www.bweetech.com</a></div>
 <div class="ci"><span class="ic">📍</span>上海市闵行区新骏环路188号15号楼南5层A501室</div>
@@ -851,12 +921,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Decoration">
 <div class="shd">
 <div class="snum">30</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/30_card1_76fdb6d9-34da-4a12-b190-2f024ec860b9.jpg" alt="Card 30" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Suzhou Acousound New Material Technology Inc.</div>
+<span class="ctag">Decoration</span>
 <div class="ci"><span class="ic">👤</span>Yolanda He</div>
 <div class="ci"><span class="ic">📞</span>+86-18018121056</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.polyacoustic.com" target="_blank">www.polyacoustic.com</a></div>
@@ -879,12 +950,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Bath">
 <div class="shd">
 <div class="snum">31</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/31_card1_9c75bcfb-1dec-4a81-b523-7597c5629097.jpg" alt="Card 31" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">诺奥(福建)环保家居用品有限公司</div>
+<span class="ctag">Bath</span>
 <div class="ci"><span class="ic">👤</span>蔡绿缘</div>
 <div class="ci"><span class="ic">📞</span>0086-13599917696</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.fjnuoao.cn" target="_blank">www.fjnuoao.cn</a></div>
@@ -906,12 +978,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Bath">
 <div class="shd">
 <div class="snum">32</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/32_card1_4bd82fd1-300b-4bd4-8805-d41adbc1cf85.jpg" alt="Card 32" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Guangzhou Sunrans Sanitary Ware Co., Ltd / Guangzhou Sunrans New Energy Technology Co., Ltd</div>
+<span class="ctag">Bath</span>
 <div class="ci"><span class="ic">👤</span>William</div>
 <div class="ci"><span class="ic">📞</span>+86 134 1613 9887</div>
 <div class="ci"><span class="ic">🌐</span><a href="http://www.sunrans.com" target="_blank">http://www.sunrans.com</a></div>
@@ -934,12 +1007,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Decoration">
 <div class="shd">
 <div class="snum">33</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/33_card1_6378c394-e8b9-4b4c-bdf4-c1c4d59df5d0.jpg" alt="Card 33" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">IFUN PARK & TIPTOPFUN AMUSEMENT</div>
+<span class="ctag">Decoration</span>
 <div class="ci"><span class="ic">👤</span>Ivy Zhou</div>
 <div class="ci"><span class="ic">📞</span>+86 133 0238 5758</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.ifunpark.com / www.ifunamusement.com" target="_blank">www.ifunpark.com / www.ifunamusement.com</a></div>
@@ -961,12 +1035,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">34</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/34_card1_c34920bb-4835-49b9-988f-71f7345aaa1b.jpg" alt="Card 34" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">RENQIU TUOXIN BUILDING MATERIALS CO., LTD</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>Emily Li</div>
 <div class="ci"><span class="ic">📞</span>+86 19831737599</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.tuoxinfiberglassmesh.com/" target="_blank">https://www.tuoxinfiberglassmesh.com/</a></div>
@@ -989,12 +1064,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">35</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/35_card1_e49e6d3c-c5d8-4ad4-88d1-ebe1016b0a46.jpg" alt="Card 35" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">安居福智能门</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>罗加玲</div>
 <div class="ci"><span class="ic">📞</span>18928121650</div>
 <div class="ci"><span class="ic">📍</span>广东省中山市东凤镇</div>
@@ -1016,12 +1092,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">36</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/36_card1_c7b7ebdb-bfb3-421a-b48b-6216d3be806c.jpg" alt="Card 36" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">东方喜卡</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>果果</div>
 </div>
 </div>
@@ -1041,12 +1118,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">37</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/37_card1_165579c1-12a9-4e91-9044-2c3bbcb5d2cd.jpg" alt="Card 37" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">GUANGDONG TUOXUN INTELLIGENT TECHNOLOGY CO., LTD</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>Wing</div>
 <div class="ci"><span class="ic">📞</span>189-2984-9818</div>
 <div class="ci"><span class="ic">📍</span>Auto Parts Industrial Park, Jinli Town, Gaoyao District, Zhaoqing, Guangdong</div>
@@ -1068,12 +1146,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">38</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/38_card1_bd238162-bb2b-4d90-8878-6bd93ec40504.jpg" alt="Card 38" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">佛山市方泓五金建材有限公司</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>陈施志凯</div>
 <div class="ci"><span class="ic">📞</span>+86 134 3318 1558</div>
 <div class="ci"><span class="ic">📍</span>中国广东省佛山市南海区里水镇大步工业区13号</div>
@@ -1095,12 +1174,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Bath">
 <div class="shd">
 <div class="snum">39</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/39_card1_87580080-4e41-466f-af25-2a778a8a7436.jpg" alt="Card 39" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Gaocheng</div>
+<span class="ctag">Bath</span>
 <div class="ci"><span class="ic">👤</span>叶小龙/Dustin Ye</div>
 <div class="ci"><span class="ic">📞</span>+86-188 5861 0008</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.cngaocheng.cn" target="_blank">www.cngaocheng.cn</a></div>
@@ -1123,12 +1203,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">40</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/40_card1_4a8fda0c-a4da-4f80-8210-f0fa41e7b165.jpg" alt="Card 40" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">ZHEJIANG DOUBLE-LIN VALVES CO., LTD.</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>Dream Lin</div>
 <div class="ci"><span class="ic">📞</span>86-13710718529, 86-020-66837727</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.double-lin.com" target="_blank">www.double-lin.com</a></div>
@@ -1151,12 +1232,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Decoration">
 <div class="shd">
 <div class="snum">41</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/41_card1_5906dc98-a555-4357-a80d-3e9840673fc5.jpg" alt="Card 41" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">CHANGZHOU YOUCARE DECORATION ENGINEERING CO.LTD.</div>
+<span class="ctag">Decoration</span>
 <div class="ci"><span class="ic">👤</span>Eric Huang</div>
 <div class="ci"><span class="ic">📞</span>13813551160, 0519-88784050</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.ycpanel.com" target="_blank">www.ycpanel.com</a></div>
@@ -1179,12 +1261,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Doors">
 <div class="shd">
 <div class="snum">42</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/42_card1_8f78702e-415a-49bc-a2e9-73ed3c415b79.jpg" alt="Card 42" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">优品声学吸音隔音</div>
+<span class="ctag">Doors</span>
 <div class="ci"><span class="ic">👤</span>杨伟杰</div>
 </div>
 </div>
@@ -1204,12 +1287,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Doors">
 <div class="shd">
 <div class="snum">43</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/43_card1_0b1a4096-ac4e-4569-93cc-1515ffc32e4d.jpg" alt="Card 43" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">广州市优品声学科技有限公司</div>
+<span class="ctag">Doors</span>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.gzypsx.com" target="_blank">www.gzypsx.com</a></div>
 <div class="ci"><span class="ic">📍</span>广东省广州市番禺区石碁镇文边路28号二栋二层</div>
 </div>
@@ -1230,12 +1314,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Coatings">
 <div class="shd">
 <div class="snum">44</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/44_card1_39bc3a94-f845-4fea-8dd1-cf32bd3a38fa.jpg" alt="Card 44" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">贵州佑远木业有限公司</div>
+<span class="ctag">Coatings</span>
 <div class="ci"><span class="ic">👤</span>颜加伟</div>
 <div class="ci"><span class="ic">📞</span>133 9983 5678</div>
 <div class="ci"><span class="ic">📍</span>贵州省赤水市成渝（赤水）家具产业园A3-2</div>
@@ -1257,12 +1342,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Coatings">
 <div class="shd">
 <div class="snum">45</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/45_card1_9d2da64d-a246-4788-af39-46420f52ce98.jpg" alt="Card 45" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">贵州佑远木业有限公司</div>
+<span class="ctag">Coatings</span>
 <div class="ci"><span class="ic">👤</span>颜加伟</div>
 <div class="ci"><span class="ic">📞</span>133 9983 5678</div>
 <div class="ci"><span class="ic">📍</span>贵州省赤水市成渝(赤水)家居产业园A3-2</div>
@@ -1284,12 +1370,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Bath">
 <div class="shd">
 <div class="snum">46</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/46_card1_824b5e8e-2e63-4f03-ad78-8ddab424df49.jpg" alt="Card 46" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">MOERSHU 摩尔舒卫浴</div>
+<span class="ctag">Bath</span>
 <div class="ci"><span class="ic">👤</span>Thea</div>
 <div class="ci"><span class="ic">📞</span>13957622087</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.moershu.com" target="_blank">www.moershu.com</a></div>
@@ -1312,12 +1399,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Building">
 <div class="shd">
 <div class="snum">47</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/47_card1_364b192a-4c0b-49e6-bcb2-a05b9bc71d83.jpg" alt="Card 47" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">江西荣科新型材料有限公司 (JIANGXI RONGKE NEW BUILDING MATERIALS CO., LTD)</div>
+<span class="ctag">Building</span>
 <div class="ci"><span class="ic">👤</span>Lucy Zeng (曾露)</div>
 <div class="ci"><span class="ic">📞</span>+86-13134020034</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.amerdecor.com/" target="_blank">https://www.amerdecor.com/</a></div>
@@ -1339,12 +1427,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Packaging">
 <div class="shd">
 <div class="snum">48</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/48_card1_eb85972f-da3f-4c80-a204-fd204c0d9051.jpg" alt="Card 48" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Поставщик #48</div>
+<span class="ctag">Packaging</span>
 </div>
 </div>
 <div class="pl">3 товаров</div>
@@ -1363,12 +1452,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Packaging">
 <div class="shd">
 <div class="snum">49</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/49_card1_18758511-a4c5-4f48-a712-d4eee15f23cd.jpg" alt="Card 49" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">东风汽车</div>
+<span class="ctag">Packaging</span>
 </div>
 </div>
 <div class="pl">3 товаров</div>
@@ -1387,12 +1477,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Decoration">
 <div class="shd">
 <div class="snum">50</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/50_card1_6d97eb7b-7cfc-45f6-9eda-d997a667f757.jpg" alt="Card 50" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">CHANGZHOU YOUCARE DECORATION ENGINEERING CO.,LTD.</div>
+<span class="ctag">Decoration</span>
 <div class="ci"><span class="ic">👤</span>Eric Huang</div>
 <div class="ci"><span class="ic">📞</span>13813551160</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.ycpanel.com" target="_blank">www.ycpanel.com</a></div>
@@ -1415,12 +1506,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="General">
 <div class="shd">
 <div class="snum">51</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/51_card1_507bf4b5-7450-44c3-a6cc-dcc320fe1cce.jpg" alt="Card 51" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">江西瑞京鸿兴实业有限公司</div>
+<span class="ctag">General</span>
 <div class="ci"><span class="ic">👤</span>朱友群</div>
 <div class="ci"><span class="ic">📞</span>13763963598</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.jx-wpc.com" target="_blank">www.jx-wpc.com</a></div>
@@ -1443,12 +1535,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Furnishing">
 <div class="shd">
 <div class="snum">52</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/52_card1_8744294f-4df7-4e63-9a7a-a3b5becd9f4d.jpg" alt="Card 52" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">ciarra</div>
+<span class="ctag">Furnishing</span>
 <div class="ci"><span class="ic">👤</span>Linda</div>
 <div class="ci"><span class="ic">📞</span>+86 1882 9964 960 / +86 1343 2639 580</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.ciarrahome.com" target="_blank">www.ciarrahome.com</a></div>
@@ -1471,12 +1564,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Bath">
 <div class="shd">
 <div class="snum">53</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/53_card1_79983a59-e1d7-4135-b224-5fd35f635954.jpg" alt="Card 53" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Xuancheng Hengxin Sanitary Ware Co., Ltd</div>
+<span class="ctag">Bath</span>
 <div class="ci"><span class="ic">👤</span>Anne</div>
 <div class="ci"><span class="ic">📞</span>18656330093</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://ck-bath.com/" target="_blank">https://ck-bath.com/</a></div>
@@ -1499,12 +1593,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Doors">
 <div class="shd">
 <div class="snum">54</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/54_card1_3e180bc3-f2d4-4517-a15d-00926e85b846.jpg" alt="Card 54" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">佛山市旌晨铝门窗有限公司</div>
+<span class="ctag">Doors</span>
 <div class="ci"><span class="ic">👤</span>胡光辉</div>
 <div class="ci"><span class="ic">📞</span>18128752879</div>
 <div class="ci"><span class="ic">📍</span>佛山市狮山镇谭边工业区崩岗头路四号之一</div>
@@ -1526,12 +1621,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Doors">
 <div class="shd">
 <div class="snum">55</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/55_card1_912f16e6-f89c-4943-942a-f9b08883719f.jpg" alt="Card 55" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">河南贝迪塑业有限公司 (HENAN BEIDI PLASTIC INDUSTRY CO., LTD.)</div>
+<span class="ctag">Doors</span>
 <div class="ci"><span class="ic">👤</span>代桂菊 (Cathy Dai)</div>
 <div class="ci"><span class="ic">📞</span>+86 151 3737 2072</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.baydeegroup.com" target="_blank">www.baydeegroup.com</a></div>
@@ -1554,12 +1650,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Doors">
 <div class="shd">
 <div class="snum">56</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/56_card1_236efcb5-085c-477b-9868-783fae744aec.jpg" alt="Card 56" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">佛山市旌晨铝门窗有限公司</div>
+<span class="ctag">Doors</span>
 <div class="ci"><span class="ic">👤</span>张广帅</div>
 <div class="ci"><span class="ic">📞</span>13726358587, 400-9155262</div>
 <div class="ci"><span class="ic">📍</span>佛山市狮山镇谭边工业区顾岗头路四号之一</div>
@@ -1579,12 +1676,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Furnishing">
 <div class="shd">
 <div class="snum">57</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/57_card1_23837467-e670-4d6f-bab5-b2bd62c9697e.jpg" alt="Card 57" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">景德镇窑珍陶瓷</div>
+<span class="ctag">Furnishing</span>
 <div class="ci"><span class="ic">👤</span>徐云霞</div>
 <div class="ci"><span class="ic">📞</span>13697981203</div>
 <div class="ci"><span class="ic">📍</span>店面地址：江西省景德镇市国贸广场国贸街1号；厂址：吕蒙高新工业园沟上008号</div>
@@ -1606,12 +1704,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Packaging">
 <div class="shd">
 <div class="snum">58</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/58_card1_f9ace309-11f1-453a-9245-dd569a1dfb81.jpg" alt="Card 58" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">湖北龙王垭茶业有限公司</div>
+<span class="ctag">Packaging</span>
 </div>
 </div>
 <div class="pl">3 товаров</div>
@@ -1630,12 +1729,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Bath">
 <div class="shd">
 <div class="snum">59</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/59_card1_b5911a32-479f-4a28-b13d-00ff81a016a8.jpg" alt="Card 59" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">聖羅蘭·衛浴 (Sannora)</div>
+<span class="ctag">Bath</span>
 <div class="ci"><span class="ic">👤</span>ALLEN XU (许熙平)</div>
 <div class="ci"><span class="ic">📞</span>+86 137 0224 0244</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.sannora.com" target="_blank">www.sannora.com</a></div>
@@ -1658,12 +1758,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Furnishing">
 <div class="shd">
 <div class="snum">60</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/60_card1_0ea06a3e-e204-46da-9775-936a72e015c7.jpg" alt="Card 60" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">ZHEJIANG SEATING TECHNOLOGY CO., LTD.</div>
+<span class="ctag">Furnishing</span>
 <div class="ci"><span class="ic">👤</span>May Zhang</div>
 <div class="ci"><span class="ic">📞</span>+86 182 5727 1590</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.zjseating.com" target="_blank">www.zjseating.com</a></div>
@@ -1686,12 +1787,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Packaging">
 <div class="shd">
 <div class="snum">61</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/61_card1_87698912-0fd2-4e25-aec6-9b095dda3c09.jpg" alt="Card 61" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Поставщик #61</div>
+<span class="ctag">Packaging</span>
 </div>
 </div>
 <div class="pl">3 товаров</div>
@@ -1710,12 +1812,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Furnishing">
 <div class="shd">
 <div class="snum">62</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/62_card1_9f75ad15-edc7-40d8-be37-e8a9907f2316.jpg" alt="Card 62" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">佛山市同路匠人家具有限公司</div>
+<span class="ctag">Furnishing</span>
 <div class="ci"><span class="ic">👤</span>蒙玉婷</div>
 <div class="ci"><span class="ic">📞</span>13160953218</div>
 <div class="ci"><span class="ic">📍</span>广东省佛山市顺德区龙江镇联盟路三路3号9513家具总部</div>
@@ -1737,12 +1840,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">63</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/63_card1_630491ed-60c9-4422-af4e-5b959e35f8d9.jpg" alt="Card 63" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">HONGKONG PINGAO INDUSTRIAL CO., LTD / PINGAO HARDWARE & PLASTIC PRODUCTS FACTORY</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>Pacao Yin</div>
 <div class="ci"><span class="ic">📞</span>(0086)13903035682 / (0086)0769-86378283</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.pingaolao.com / https://dgpingao.1688.com" target="_blank">www.pingaolao.com / https://dgpingao.1688.com</a></div>
@@ -1765,12 +1869,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Furnishing">
 <div class="shd">
 <div class="snum">64</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/64_card1_36ab9583-8cb0-4d64-ace6-fa85af4d43ca.jpg" alt="Card 64" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">佛山市同路匠人家具有限公司</div>
+<span class="ctag">Furnishing</span>
 <div class="ci"><span class="ic">👤</span>肖汝兰</div>
 <div class="ci"><span class="ic">📞</span>18675197017</div>
 <div class="ci"><span class="ic">📍</span>广东省佛山市顺德区龙江镇联盟嘉园三路3号9513家具总部</div>
@@ -1792,12 +1897,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">65</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/65_card1_65fb1299-850c-41e4-8158-d6f4c8d1a6ff.jpg" alt="Card 65" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">浙江鑫东洁具有限公司 (ZHEJIANG XINDONG SANITARY WARE CO., LTD.)</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>冯晶晶 Joanna</div>
 <div class="ci"><span class="ic">📞</span>0086-159 9067 6107</div>
 <div class="ci"><span class="ic">📍</span>Xuanmen Industrial Zone, Yuhuan, Zhejiang, China, 317608</div>
@@ -1818,12 +1924,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Decoration">
 <div class="shd">
 <div class="snum">66</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/66_card1_4ca02c4f-db5d-4c91-b672-3db8f83d300b.jpg" alt="Card 66" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">Chongnuo(Shandong)NewMaterial Co.,Ltd.</div>
+<span class="ctag">Decoration</span>
 <div class="ci"><span class="ic">👤</span>Daisy</div>
 <div class="ci"><span class="ic">📞</span>+86 19906379675</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.chongnuo-floors.com" target="_blank">www.chongnuo-floors.com</a></div>
@@ -1845,12 +1952,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">67</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/67_card1_6de0f86d-2f74-4ae6-8ed5-1064a3529c89.jpg" alt="Card 67" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">ZHE JIANG TIANYAN HOLDING LTD</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>NICOLE</div>
 <div class="ci"><span class="ic">📍</span>TAIZHOU, ZHEJIANG</div>
 </div>
@@ -1871,12 +1979,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">68</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/68_card1_ea6e9e06-1713-47af-9b23-119ba4e9422e.jpg" alt="Card 68" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">中国广东柜邦精密金属制品有限公司 (China Guangdong Guibang Precision Metal Products Co.Ltd)</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>唐一智 (JUNIOR)</div>
 <div class="ci"><span class="ic">📞</span>+86-156-2562-1155</div>
 <div class="ci"><span class="ic">📍</span>Jieyang City, Guangdong Province Jiedong Longwei high-tech Zone industrial Park</div>
@@ -1898,12 +2007,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">69</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/69_card1_f449baf7-97c8-4810-8f8c-ffe2356b315b.jpg" alt="Card 69" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">广东亚当斯金属精密制造有限公司 (Guangdong Adams Metal Precision Manufacturing Co., Ltd.)</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>Kelly Liang 梁凯莹</div>
 <div class="ci"><span class="ic">📞</span>+86-180-2935-2895 / +86-757-25331912</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.adamsmetal.com.cn" target="_blank">www.adamsmetal.com.cn</a></div>
@@ -1926,12 +2036,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Building">
 <div class="shd">
 <div class="snum">70</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/70_card1_7be36265-c19d-4799-8282-9870fd926339.jpg" alt="Card 70" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">多彩帐篷 (DUOCAI TENT)</div>
+<span class="ctag">Building</span>
 <div class="ci"><span class="ic">👤</span>Jimmy 黄锦民</div>
 <div class="ci"><span class="ic">📞</span>+86-766-8298662, (86)133 2294 8506</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.dc-tent.com, www.sdduocaizp.com" target="_blank">www.dc-tent.com, www.sdduocaizp.com</a></div>
@@ -1954,12 +2065,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Hardware">
 <div class="shd">
 <div class="snum">71</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/71_card1_b6698c1c-e570-4c0e-8dcc-c6c3e1725d9e.jpg" alt="Card 71" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">河北天丰金属制品有限公司 (Hebei Tianfeng Metal Products Co., Ltd.)</div>
+<span class="ctag">Hardware</span>
 <div class="ci"><span class="ic">👤</span>孟少美 (Elie Meng)</div>
 <div class="ci"><span class="ic">📞</span>13103196326</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.hbtfjs.com" target="_blank">www.hbtfjs.com</a></div>
@@ -1982,12 +2094,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Bath">
 <div class="shd">
 <div class="snum">72</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/72_card1_5f117fa6-8032-48c2-a8dc-da1553a8887c.jpg" alt="Card 72" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">广州蒙娜丽莎卫浴股份有限公司</div>
+<span class="ctag">Bath</span>
 <div class="ci"><span class="ic">👤</span>伍乐彤</div>
 <div class="ci"><span class="ic">📞</span>86 13711117863</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.monalisa.cn" target="_blank">www.monalisa.cn</a></div>
@@ -2010,12 +2123,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Decoration">
 <div class="shd">
 <div class="snum">73</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/73_card1_90021bb0-7a9c-4ee1-89a3-92925f1d6de8.jpg" alt="Card 73" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">广西中晨木业有限公司 (Guangxi Zhongchen Wood Industry Co., Ltd.)</div>
+<span class="ctag">Decoration</span>
 <div class="ci"><span class="ic">👤</span>张爱彬 (Zhang Aibin)</div>
 <div class="ci"><span class="ic">📞</span>+86 18178085851</div>
 </div>
@@ -2036,12 +2150,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Decoration">
 <div class="shd">
 <div class="snum">74</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/74_card1_c599498e-5c40-4b79-9b8b-ad1b892f51e3.jpg" alt="Card 74" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">浙江安吉双虎竹木业有限公司</div>
+<span class="ctag">Decoration</span>
 <div class="ci"><span class="ic">👤</span>周瑶琳</div>
 <div class="ci"><span class="ic">📞</span>+86-137 3822 8209</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://www.tigerbamboo.com / www.nuodibm.com" target="_blank">www.tigerbamboo.com / www.nuodibm.com</a></div>
@@ -2064,12 +2179,13 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </div>
 </section>
-<section class="sup">
+<section class="sup" data-cat="Decoration">
 <div class="shd">
 <div class="snum">75</div>
 <div class="sbc-wrap"><img class="sbc" src="cards_clean/75_card1_2affcb12-67f5-4be5-bbbb-ad98a7e4dc68.jpg" alt="Card 75" onclick="openlb(this.src)"></div>
 <div class="sinfo">
 <div class="sname">宏宇集团 (HONGYU GROUP)</div>
+<span class="ctag">Decoration</span>
 <div class="ci"><span class="ic">👤</span>Melina 王玲</div>
 <div class="ci"><span class="ic">📞</span>+86 13827702216</div>
 <div class="ci"><span class="ic">🌐</span><a href="https://en.hongyugroup.com" target="_blank">en.hongyugroup.com</a></div>
@@ -2093,10 +2209,23 @@ section.sup{background:var(--apple-white);border-radius:var(--apple-radius);padd
 </div>
 </section>
 </div>
-<div class="footer">🌿 CBD Expo Supplier Catalog · 2026</div>
+<div class="footer">🏗️ CBD Guangzhou 2026 · Supplier Catalog · 2026</div>
 <div class="lb" id="lb" onclick="this.classList.remove('show')"><img id="lbi"></div>
 <script>
 function openlb(s){document.getElementById('lbi').src=s;document.getElementById('lb').classList.add('show')}
+function filterByCat(cat,btn){
+    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+    if(btn) btn.classList.add('active');
+    document.querySelectorAll('section.sup').forEach(s=>{
+        s.style.display=(cat==='all'||s.dataset.cat===cat)?'block':'none'
+    });
+}
+function filterCards(){
+    var q=document.getElementById('searchBox').value.toLowerCase();
+    document.querySelectorAll('section.sup').forEach(s=>{
+        s.style.display=s.textContent.toLowerCase().includes(q)?'block':'none'
+    });
+}
 </script>
 </body>
 </html>
